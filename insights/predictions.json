@@ -1,0 +1,29 @@
+{
+  "type": "static_file",
+  "params": {
+    "contentType": "text/html",
+    "filetype": "html"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "predictions",
+  "versionTag": {
+    "versionNumber": 5,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1582036327613
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1582023645368
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

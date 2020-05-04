@@ -1,0 +1,29 @@
+{
+  "type": "web_app",
+  "params": {
+    "webAppSmartId": "4WjVHSr",
+    "webAppType": "STANDARD"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Update Variables",
+  "dashboardCreationId": "SNaFZif",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577455316297
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577455316297
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

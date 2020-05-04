@@ -1,0 +1,129 @@
+{
+    "meta": {
+        "label": "Currency From Git",
+        "description": "Fetch the Exchange Rate on a specific period",
+        "icon": "icon-usd"
+    },
+
+    "kind": "PYTHON",
+
+    "inputRoles": [
+    ],
+
+    "outputRoles": [
+        {
+            "name": "main_output",
+            "label": "Exchange Rate Output Dataset",
+            "description": "The output will be a dataset of two columns, date & exchange rate",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+
+    "params": [
+        {
+            "name": "start_date",
+            "label": "Start Date",
+            "type": "DATE",
+            "description": "Starting Date",
+            "mandatory": true
+        },
+        {
+            "name": "end_date",
+            "label": "End Date",
+            "type": "DATE",
+            "description": "Ending Date",
+            "mandatory": true
+        },
+        {
+            "name": "currency_base",
+            "type": "SELECT",
+            "label" : "From Currency",
+            "selectChoices": [
+                {
+                    "value": "EUR",
+                    "label": "EUR"
+                },
+                {
+                    "value": "AUD",
+                    "label": "AUD"
+                },
+                {
+                    "value": "USD",
+                    "label": "USD"
+                },
+                {
+                    "value": "GBP",
+                    "label": "GBP"
+                },
+                {
+                    "value": "CNY",
+                    "label": "CNY"
+                },
+                {
+                    "value": "INR",
+                    "label": "INR"
+                },
+                {
+                    "value": "HKD",
+                    "label": "HKD"
+                },
+                {
+                    "value": "JPY",
+                    "label": "JPY"
+                },
+                {
+                    "value": "BRL",
+                    "label": "BRL"
+                }
+            ]
+        },
+        {
+            "name": "currency_to",
+            "type": "SELECT",
+            "label" : "To Currency",
+            "selectChoices": [
+                {
+                    "value": "EUR",
+                    "label": "EUR"
+                },
+                {
+                    "value": "AUD",
+                    "label": "AUD"
+                },
+                {
+                    "value": "USD",
+                    "label": "USD"
+                },
+                {
+                    "value": "GBP",
+                    "label": "GBP"
+                },
+                {
+                    "value": "CNY",
+                    "label": "CNY"
+                },
+                {
+                    "value": "INR",
+                    "label": "INR"
+                },
+                {
+                    "value": "HKD",
+                    "label": "HKD"
+                },
+                {
+                    "value": "JPY",
+                    "label": "JPY"
+                },
+                {
+                    "value": "BRL",
+                    "label": "BRL"
+                }
+            ]
+        }
+    ],
+
+    "resourceKeys": []
+
+}

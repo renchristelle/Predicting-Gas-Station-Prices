@@ -1,0 +1,314 @@
+{
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 10,
+    "selection": {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": [
+            {
+              "input": "UNIDADE DE MEDIDA",
+              "col": "DATA INICIAL",
+              "string": "R$/m3",
+              "num": 0.0,
+              "operator": "contains"
+            }
+          ]
+        },
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 1000,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": 104857600,
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL"
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "DATA INICIAL",
+            "to": "date_start"
+          },
+          {
+            "from": "DATA FINAL",
+            "to": "date_end"
+          },
+          {
+            "from": "REGIÃO",
+            "to": "region"
+          },
+          {
+            "from": "ESTADO",
+            "to": "state"
+          },
+          {
+            "from": "PRODUTO",
+            "to": "kind_of_product"
+          },
+          {
+            "from": "NÚMERO DE POSTOS PESQUISADOS",
+            "to": "nb_gas_stations_analysed"
+          },
+          {
+            "from": "UNIDADE DE MEDIDA",
+            "to": "measurement_unit"
+          },
+          {
+            "from": "PREÇO MÉDIO REVENDA",
+            "to": "mean_market_value"
+          },
+          {
+            "from": "DESVIO PADRÃO REVENDA",
+            "to": "std_market_value"
+          },
+          {
+            "from": "PREÇO MÍNIMO REVENDA",
+            "to": "min_price"
+          },
+          {
+            "from": "PREÇO MÁXIMO REVENDA",
+            "to": "max_price"
+          },
+          {
+            "from": "MARGEM MÉDIA REVENDA",
+            "to": "mean_price_margin"
+          },
+          {
+            "from": "COEF DE VARIAÇÃO REVENDA",
+            "to": "var_coeff"
+          },
+          {
+            "from": "PREÇO MÉDIO DISTRIBUIÇÃO",
+            "to": "mean_distribution_price"
+          },
+          {
+            "from": "DESVIO PADRÃO DISTRIBUIÇÃO",
+            "to": "std_distribution_price"
+          },
+          {
+            "from": "PREÇO MÍNIMO DISTRIBUIÇÃO",
+            "to": "min_distribution_price"
+          },
+          {
+            "from": "PREÇO MÁXIMO DISTRIBUIÇÃO",
+            "to": "max_distribution_price"
+          },
+          {
+            "from": "var_coeff",
+            "to": "var_coeff_price"
+          },
+          {
+            "from": "COEF DE VARIAÇÃO DISTRIBUIÇÃO",
+            "to": "var_coeff_distribution_price"
+          },
+          {
+            "from": "MÊS",
+            "to": "month"
+          },
+          {
+            "from": "ANO",
+            "to": "year"
+          }
+        ]
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(mean_distribution_price\u003d\u003d\u0027-\u0027,mean_market_value,mean_distribution_price)",
+        "column": "mean_distribution_price"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsConcat",
+      "params": {
+        "outputColumn": "kind_of_product",
+        "columns": [
+          "kind_of_product",
+          "measurement_unit"
+        ],
+        "join": "_"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "col_0",
+          "month",
+          "year",
+          "mean_market_value",
+          "std_market_value",
+          "min_price",
+          "mean_price_margin",
+          "var_coeff_price",
+          "std_distribution_price",
+          "min_distribution_price",
+          "max_distribution_price",
+          "var_coeff_distribution_price",
+          "max_price",
+          "measurement_unit"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "mapping": [
+          {
+            "from": "GASOLINA COMUM",
+            "to": "regular_gasoline"
+          },
+          {
+            "from": "ÓLEO DIESEL",
+            "to": "diesel_oil"
+          },
+          {
+            "from": "GLP",
+            "to": "liquefied_petroleum_gas"
+          },
+          {
+            "from": "ETANOL HIDRATADO",
+            "to": "hydrated_ethanol"
+          },
+          {
+            "from": "GNV",
+            "to": "natural_gas"
+          },
+          {
+            "from": "ÓLEO DIESEL S10",
+            "to": "diesel_oil_s10"
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "kind_of_product"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "FULL_STRING"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "date_start",
+        "formats": [
+          "yyyy-MM-dd"
+        ],
+        "columns": [
+          "date_start",
+          "date_end"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "COLUMNS",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "NORMALIZE",
+        "columns": [
+          "state"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "kind_of_product",
+        "mapping": [
+          {
+            "from": "Ó",
+            "to": "O"
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "kind_of_product"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "FULL_STRING"
+      },
+      "alwaysShowComment": false
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "sorting": [
+    {
+      "column": "date_start",
+      "ascending": true
+    }
+  ],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  }
+}

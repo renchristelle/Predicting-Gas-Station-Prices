@@ -1,0 +1,232 @@
+{
+  "centileShuffle": false,
+  "centileSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "defaultOutputIndex": 1,
+  "seed": 1337,
+  "randomColumns": [],
+  "centileOrders": [],
+  "rangeSetTime": false,
+  "randomSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "randomColumnsSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "computedColumns": [],
+  "writeComputedColumnsInOutput": false,
+  "mode": "FILTERS",
+  "centileTDigest": false,
+  "valueSplits": [
+    {
+      "outputIndex": 0,
+      "caseSensitive": false
+    }
+  ],
+  "rangeSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": []
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "filterSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": [
+            {
+              "date": "2018-12-31",
+              "input": "date_start",
+              "col": "mean_distribution_price",
+              "string": "2019.*",
+              "num": 0,
+              "time": "00:00",
+              "operator": "\u003c  [date]"
+            }
+          ]
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "date_start",
+                "type": "date"
+              },
+              {
+                "name": "date_end",
+                "type": "date"
+              },
+              {
+                "name": "region",
+                "type": "string"
+              },
+              {
+                "name": "gas_state",
+                "type": "string"
+              },
+              {
+                "name": "kind_of_product",
+                "type": "string"
+              },
+              {
+                "name": "nb_gas_stations_analysed",
+                "type": "double"
+              },
+              {
+                "name": "mean_distribution_price",
+                "type": "double"
+              },
+              {
+                "name": "mdp_25w_mean_distribution_price_avg",
+                "type": "double"
+              },
+              {
+                "name": "mdp_avg_1m_25w_mean_distribution_price_avg",
+                "type": "double"
+              },
+              {
+                "name": "mdp_avg_3m_25w_mean_distribution_price_avg",
+                "type": "double"
+              },
+              {
+                "name": "oil_Date",
+                "type": "date"
+              },
+              {
+                "name": "oil_Date_week",
+                "type": "double"
+              },
+              {
+                "name": "oil_Price",
+                "type": "double"
+              },
+              {
+                "name": "oil_op_25w_Price_avg",
+                "type": "double"
+              },
+              {
+                "name": "oil_op_avg_1m_25w_Price_avg",
+                "type": "double"
+              },
+              {
+                "name": "oil_op_avg_3m_25w_Price_avg",
+                "type": "double"
+              },
+              {
+                "name": "static_state_full",
+                "type": "string"
+              },
+              {
+                "name": "static_city_count",
+                "type": "double"
+              },
+              {
+                "name": "static_human_dvpt_index_avg",
+                "type": "double"
+              },
+              {
+                "name": "static_life_exp_index_avg",
+                "type": "double"
+              },
+              {
+                "name": "static_estimated_pop_sum",
+                "type": "double"
+              },
+              {
+                "name": "static_gdp_per_capita_avg",
+                "type": "double"
+              },
+              {
+                "name": "static_nb_companies_sum",
+                "type": "double"
+              },
+              {
+                "name": "static_assets_private_banks_sum",
+                "type": "double"
+              },
+              {
+                "name": "static_assets_public_banks_sum",
+                "type": "double"
+              },
+              {
+                "name": "static_nb_cars_sum",
+                "type": "double"
+              },
+              {
+                "name": "exchange_day",
+                "type": "date"
+              },
+              {
+                "name": "exchange_rate",
+                "type": "double"
+              }
+            ]
+          },
+          "validated": true,
+          "fullyTranslated": false,
+          "ok": false,
+          "message": "Filter expression is invalid"
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ]
+}

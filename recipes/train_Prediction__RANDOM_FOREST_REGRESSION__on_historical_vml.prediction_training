@@ -1,0 +1,1031 @@
+{
+    "core": {
+        "prediction_type": "REGRESSION", 
+        "weight": {
+            "weightMethod": "NO_WEIGHTING"
+        }, 
+        "calibration": {
+            "calibrationMethod": "NO_CALIBRATION"
+        }, 
+        "partitionedModel": {
+            "enabled": false, 
+            "ssdSelection": {
+                "targetRatio": 0.02, 
+                "maxReadUncompressedBytes": -1, 
+                "ordering": {
+                    "rules": [], 
+                    "enabled": false
+                }, 
+                "latestPartitionsN": 1, 
+                "filter": {
+                    "distinct": false, 
+                    "enabled": false
+                }, 
+                "withinFirstN": -1, 
+                "maxRecords": -1, 
+                "partitionSelectionMethod": "ALL", 
+                "useMemTable": false, 
+                "samplingMethod": "FULL"
+            }
+        }, 
+        "backendType": "PY_MEMORY", 
+        "time": {
+            "ascending": true, 
+            "enabled": true, 
+            "timeVariable": "date_start"
+        }, 
+        "executionParams": {
+            "sparkCheckpoint": "NONE", 
+            "sparkParams": {
+                "sparkUseGlobalMetastore": false, 
+                "sparkExecutionEngine": "SPARK_SUBMIT", 
+                "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK", 
+                "pipelineAllowStart": true, 
+                "pipelineAllowMerge": true, 
+                "sparkConf": {
+                    "inheritConf": "default", 
+                    "conf": []
+                }, 
+                "sparkRepartitionNonHDFS": 1
+            }, 
+            "containerSelection": {
+                "containerMode": "INHERIT"
+            }, 
+            "envSelection": {
+                "envMode": "USE_BUILTIN_MODE"
+            }
+        }, 
+        "taskType": "PREDICTION", 
+        "target_variable": "mean_distribution_price"
+    }, 
+    "partSource": "ACTIVE_VERSION", 
+    "generatingModelId": "A-PREDICTINGGASSTATIONPRICES-oyXKLMZ5-SKNwKjbF-s3-pp1-m1", 
+    "splitParams": {
+        "efsdTrain": {
+            "filter": {
+                "uiData": {
+                    "conditions": [
+                        {
+                            "operator": "<  [date]", 
+                            "num": 0.0, 
+                            "time": "00:00", 
+                            "date": "2018-07-25", 
+                            "input": "date_start", 
+                            "col": "region"
+                        }
+                    ], 
+                    "mode": "&&"
+                }, 
+                "distinct": false, 
+                "enabled": true
+            }, 
+            "selection": {
+                "targetRatio": 0.02, 
+                "maxReadUncompressedBytes": -1, 
+                "ordering": {
+                    "rules": [], 
+                    "enabled": false
+                }, 
+                "latestPartitionsN": 1, 
+                "filter": {
+                    "distinct": false, 
+                    "enabled": false
+                }, 
+                "withinFirstN": -1, 
+                "maxRecords": 100000, 
+                "partitionSelectionMethod": "ALL", 
+                "useMemTable": false, 
+                "samplingMethod": "HEAD_SEQUENTIAL"
+            }
+        }, 
+        "ssdColumn": "date_start", 
+        "kfold": false, 
+        "splitBeforePrepare": true, 
+        "instanceIdRefresher": 0, 
+        "ttPolicy": "EXPLICIT_FILTERING_SINGLE_DATASET", 
+        "efsdTest": {
+            "filter": {
+                "uiData": {
+                    "conditions": [
+                        {
+                            "operator": ">= [date]", 
+                            "num": 0.0, 
+                            "time": "00:00", 
+                            "date": "2018-07-26", 
+                            "input": "date_start", 
+                            "col": "region"
+                        }
+                    ], 
+                    "mode": "&&"
+                }, 
+                "distinct": false, 
+                "enabled": true
+            }, 
+            "selection": {
+                "targetRatio": 0.02, 
+                "maxReadUncompressedBytes": -1, 
+                "ordering": {
+                    "rules": [], 
+                    "enabled": false
+                }, 
+                "latestPartitionsN": 1, 
+                "filter": {
+                    "distinct": false, 
+                    "enabled": false
+                }, 
+                "withinFirstN": -1, 
+                "maxRecords": 100000, 
+                "partitionSelectionMethod": "ALL", 
+                "useMemTable": false, 
+                "samplingMethod": "HEAD_SEQUENTIAL"
+            }
+        }, 
+        "testOnLargerValues": true, 
+        "ssdSplitMode": "SORTED", 
+        "ssdSelection": {
+            "targetRatio": 0.02, 
+            "maxReadUncompressedBytes": -1, 
+            "ordering": {
+                "rules": [], 
+                "enabled": false
+            }, 
+            "latestPartitionsN": 1, 
+            "filter": {
+                "distinct": false, 
+                "enabled": false
+            }, 
+            "withinFirstN": -1, 
+            "maxRecords": 100000, 
+            "partitionSelectionMethod": "ALL", 
+            "useMemTable": false, 
+            "samplingMethod": "HEAD_SEQUENTIAL"
+        }, 
+        "ssdTrainingRatio": 0.8, 
+        "ssdSeed": 1337, 
+        "nFolds": 5, 
+        "subSamplingSeed": 1337
+    }, 
+    "backendType": "PY_MEMORY", 
+    "script": {
+        "maxProcessedMemTableBytes": -1, 
+        "sorting": [], 
+        "contextProjectKey": "PREDICTINGGASSTATIONPRICES", 
+        "columnsSelection": {
+            "mode": "ALL"
+        }, 
+        "analysisColumnData": {}, 
+        "exploreUIParams": {}, 
+        "vizSampling": {
+            "autoRefreshSample": false, 
+            "_refreshTrigger": 0
+        }, 
+        "coloring": {
+            "scheme": "MEANING_AND_STATUS", 
+            "valueColoringMode": "HASH", 
+            "individualColumns": []
+        }, 
+        "steps": [], 
+        "globalSearchQuery": "", 
+        "previewMode": "ALL_ROWS", 
+        "explorationSampling": {
+            "autoRefreshSample": false, 
+            "selection": {
+                "targetRatio": 0.02, 
+                "maxReadUncompressedBytes": -1, 
+                "ordering": {
+                    "rules": [], 
+                    "enabled": false
+                }, 
+                "latestPartitionsN": 1, 
+                "filter": {
+                    "distinct": false, 
+                    "enabled": false
+                }, 
+                "withinFirstN": -1, 
+                "maxRecords": 10000, 
+                "partitionSelectionMethod": "ALL", 
+                "maxStoredBytes": 104857600, 
+                "samplingMethod": "HEAD_SEQUENTIAL"
+            }, 
+            "_refreshTrigger": 0
+        }, 
+        "explorationFilters": []
+    }, 
+    "sparkParams": {
+        "sparkUseGlobalMetastore": false, 
+        "sparkExecutionEngine": "SPARK_SUBMIT", 
+        "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK", 
+        "pipelineAllowStart": true, 
+        "pipelineAllowMerge": true, 
+        "sparkConf": {
+            "inheritConf": "default", 
+            "conf": []
+        }, 
+        "sparkRepartitionNonHDFS": 1
+    }, 
+    "preprocessing": {
+        "preprocessingFitSampleSeed": 1337, 
+        "feature_selection_params": {
+            "custom_params": {
+                "code": "# type your code here"
+            }, 
+            "pca_params": {
+                "variance_proportion": 0.9, 
+                "n_features": 25
+            }, 
+            "random_forest_params": {
+                "depth": 10, 
+                "n_features": 25, 
+                "n_trees": 30
+            }, 
+            "lasso_params": {
+                "alpha": [
+                    0.01, 
+                    0.1, 
+                    1.0, 
+                    10.0, 
+                    100.0
+                ], 
+                "cross_validate": true
+            }, 
+            "method": "NONE", 
+            "correlation_params": {
+                "n_features": 25, 
+                "min_abs_correlation": 0.0
+            }
+        }, 
+        "preprocessingFitSampleRatio": 1.0, 
+        "reduce": {
+            "enabled": false, 
+            "kept_variance": 0.0
+        }, 
+        "skipPreprocessing": false, 
+        "target_remapping": [], 
+        "per_feature": {
+            "mean_distribution_price": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "TARGET", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "static_life_exp_index_avg": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "nb_gas_stations_analysed": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "static_city_count": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "date_end": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "Date", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_IDENTIFIER", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "oil_Price": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "exchange_rate": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "date_start": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_handling": "DROP_ROW", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "Date", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "NONE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "static_assets_public_banks_sum": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "static_assets_private_banks_sum": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "oil_Date": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "Date", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "kind_of_product": {
+                "missing_impute_with": "MODE", 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "cumulative_proportion": 0.95, 
+                "sendToInput": "main", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "Text", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "missing_handling": "NONE", 
+                "dummy_drop": "NONE", 
+                "min_samples": 10, 
+                "type": "CATEGORY", 
+                "max_cat_safety": 200, 
+                "category_handling": "DUMMIFY"
+            }, 
+            "static_nb_cars_sum": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "oil_op_25w_Price_avg": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "gas_state": {
+                "missing_impute_with": "MODE", 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "cumulative_proportion": 0.95, 
+                "sendToInput": "main", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "Text", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "missing_handling": "NONE", 
+                "dummy_drop": "NONE", 
+                "min_samples": 10, 
+                "type": "CATEGORY", 
+                "max_cat_safety": 200, 
+                "category_handling": "DUMMIFY"
+            }, 
+            "exchange_day": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "Date", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "static_estimated_pop_sum": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "mdp_avg_3m_25w_mean_distribution_price_avg": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "oil_Date_week": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "CONSTANT", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "NONE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "oil_op_avg_3m_25w_Price_avg": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "static_nb_companies_sum": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "LongMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "oil_op_avg_1m_25w_Price_avg": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "region": {
+                "missing_impute_with": "MODE", 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "cumulative_proportion": 0.95, 
+                "sendToInput": "main", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "Text", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "missing_handling": "NONE", 
+                "dummy_drop": "NONE", 
+                "min_samples": 10, 
+                "type": "CATEGORY", 
+                "max_cat_safety": 200, 
+                "category_handling": "DUMMIFY"
+            }, 
+            "mdp_avg_1m_25w_mean_distribution_price_avg": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "static_state_full": {
+                "missing_impute_with": "MODE", 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "cumulative_proportion": 0.95, 
+                "sendToInput": "main", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "Text", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "max_nb_categories": 100, 
+                "dummy_clip": "MAX_NB_CATEGORIES", 
+                "missing_handling": "NONE", 
+                "dummy_drop": "NONE", 
+                "min_samples": 10, 
+                "type": "CATEGORY", 
+                "max_cat_safety": 200, 
+                "category_handling": "DUMMIFY"
+            }, 
+            "mdp_25w_mean_distribution_price_avg": {
+                "generate_derivative": false, 
+                "numerical_handling": "REGULAR", 
+                "missing_impute_with": "MEAN", 
+                "missing_handling": "IMPUTE", 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "INPUT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "rescaling": "AVGSTD", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "static_human_dvpt_index_avg": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }, 
+            "static_gdp_per_capita_avg": {
+                "generate_derivative": false, 
+                "customHandlingCode": "", 
+                "customProcessorWantsMatrix": false, 
+                "sendToInput": "main", 
+                "binarize_threshold_mode": "MEDIAN", 
+                "state": {
+                    "userModified": false, 
+                    "recordedMeaning": "DoubleMeaning", 
+                    "autoModifiedByDSS": false
+                }, 
+                "role": "REJECT", 
+                "binarize_constant_threshold": 0.0, 
+                "quantile_bin_nb_bins": 4, 
+                "autoReason": "REJECT_ZERO_VARIANCE", 
+                "type": "NUMERIC", 
+                "impute_constant_value": 0.0
+            }
+        }, 
+        "feature_generation": {
+            "manual_interactions": {
+                "interactions": []
+            }, 
+            "pairwise_linear": {
+                "behavior": "DISABLED"
+            }, 
+            "categoricals_count_transformer": {
+                "input_features": [], 
+                "all_features": false, 
+                "behavior": "DISABLED"
+            }, 
+            "polynomial_combinations": {
+                "behavior": "DISABLED"
+            }, 
+            "numericals_clustering": {
+                "k": 0, 
+                "input_features": [], 
+                "all_features": false, 
+                "behavior": "DISABLED"
+            }
+        }
+    }, 
+    "envSelection": {
+        "envMode": "USE_BUILTIN_MODE"
+    }, 
+    "modeling": {
+        "metrics": {
+            "customEvaluationMetricNeedsProba": false, 
+            "liftPoint": 0.4, 
+            "costMatrixWeights": {
+                "fnGain": 0.0, 
+                "tpGain": 1.0, 
+                "fpGain": -0.3, 
+                "tnGain": 0.0
+            }, 
+            "customEvaluationMetricGIB": true, 
+            "evaluationMetric": "R2"
+        }, 
+        "rf_regressor_grid": {
+            "max_feature_prop": 0.3, 
+            "max_tree_depth": {
+                "gridMode": "EXPLICIT", 
+                "values": [
+                    6, 
+                    15
+                ]
+            }, 
+            "selection_mode": "auto", 
+            "enabled": true, 
+            "min_samples_leaf": {
+                "gridMode": "EXPLICIT", 
+                "values": [
+                    2
+                ]
+            }, 
+            "n_estimators": {
+                "gridMode": "EXPLICIT", 
+                "values": [
+                    100
+                ]
+            }, 
+            "n_jobs": 1, 
+            "max_features": {
+                "gridMode": "EXPLICIT", 
+                "values": [
+                    0
+                ]
+            }
+        }, 
+        "algorithm": "RANDOM_FOREST_REGRESSION", 
+        "grid_search_params": {
+            "nIter": 0, 
+            "splitRatio": 0.8, 
+            "randomized": true, 
+            "shuffleIterations": 1, 
+            "mode": "TIME_SERIES_KFOLD", 
+            "timeout": 0, 
+            "nJobs": 4, 
+            "nFolds": 3, 
+            "stratified": true
+        }, 
+        "autoOptimizeThreshold": true, 
+        "gridLength": 2, 
+        "computeLearningCurves": false, 
+        "forcedClassifierThreshold": 0.0, 
+        "skipExpensiveReports": false, 
+        "max_ensemble_nodes_serialized": 6000, 
+        "pluginAlgoCustomGridSearch": false
+    }, 
+    "expectedPreparationOutputSchema": {
+        "userModified": false, 
+        "columns": [
+            {
+                "type": "date", 
+                "name": "date_start"
+            }, 
+            {
+                "type": "date", 
+                "name": "date_end"
+            }, 
+            {
+                "type": "string", 
+                "name": "region"
+            }, 
+            {
+                "type": "string", 
+                "name": "gas_state"
+            }, 
+            {
+                "type": "string", 
+                "name": "kind_of_product"
+            }, 
+            {
+                "type": "bigint", 
+                "name": "nb_gas_stations_analysed"
+            }, 
+            {
+                "type": "double", 
+                "name": "mean_distribution_price"
+            }, 
+            {
+                "type": "double", 
+                "name": "mdp_25w_mean_distribution_price_avg"
+            }, 
+            {
+                "type": "double", 
+                "name": "mdp_avg_1m_25w_mean_distribution_price_avg"
+            }, 
+            {
+                "type": "double", 
+                "name": "mdp_avg_3m_25w_mean_distribution_price_avg"
+            }, 
+            {
+                "type": "date", 
+                "name": "oil_Date"
+            }, 
+            {
+                "type": "bigint", 
+                "name": "oil_Date_week"
+            }, 
+            {
+                "type": "double", 
+                "name": "oil_Price"
+            }, 
+            {
+                "type": "double", 
+                "name": "oil_op_25w_Price_avg"
+            }, 
+            {
+                "type": "double", 
+                "name": "oil_op_avg_1m_25w_Price_avg"
+            }, 
+            {
+                "type": "double", 
+                "name": "oil_op_avg_3m_25w_Price_avg"
+            }, 
+            {
+                "type": "string", 
+                "name": "static_state_full"
+            }, 
+            {
+                "type": "bigint", 
+                "name": "static_city_count"
+            }, 
+            {
+                "type": "double", 
+                "name": "static_human_dvpt_index_avg"
+            }, 
+            {
+                "type": "double", 
+                "name": "static_life_exp_index_avg"
+            }, 
+            {
+                "type": "bigint", 
+                "name": "static_estimated_pop_sum"
+            }, 
+            {
+                "type": "double", 
+                "name": "static_gdp_per_capita_avg"
+            }, 
+            {
+                "type": "bigint", 
+                "name": "static_nb_companies_sum"
+            }, 
+            {
+                "type": "bigint", 
+                "name": "static_assets_private_banks_sum"
+            }, 
+            {
+                "type": "bigint", 
+                "name": "static_assets_public_banks_sum"
+            }, 
+            {
+                "type": "bigint", 
+                "name": "static_nb_cars_sum"
+            }, 
+            {
+                "type": "date", 
+                "name": "exchange_day"
+            }, 
+            {
+                "type": "double", 
+                "name": "exchange_rate"
+            }
+        ]
+    }, 
+    "operationMode": "TRAIN_SPLITTED_ONLY"
+}

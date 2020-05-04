@@ -1,0 +1,53 @@
+{
+  "type": "CustomCode_currency",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {
+      "start_date": "2019-12-31T23:00:00.000Z",
+      "end_date": "2020-01-21T23:00:00.000Z",
+      "currency_base": "EUR",
+      "currency_to": "USD"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {},
+  "outputs": {
+    "main_output": {
+      "items": [
+        {
+          "ref": "exchange_rate_via_plugin",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 8,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1585130092290
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1580227683961
+  },
+  "tags": [
+    "Plugin"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

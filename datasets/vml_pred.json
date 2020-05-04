@@ -1,0 +1,264 @@
+{
+  "type": "PostgreSQL",
+  "managed": true,
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 2,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1582015371687
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1581957696566
+  },
+  "tags": [
+    "Pred - Visual ML"
+  ],
+  "params": {
+    "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
+    "connection": "postgres_dev",
+    "notReadyIfEmpty": false,
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${projectKey}_vml_pred",
+    "schema": "dku_v6",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "readColsWithUnknownTzAsDates": false,
+    "readSQLDateColsAsDSSDates": true
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "date_start",
+        "type": "date"
+      },
+      {
+        "name": "date_end",
+        "type": "date"
+      },
+      {
+        "name": "region",
+        "type": "string"
+      },
+      {
+        "name": "gas_state",
+        "type": "string"
+      },
+      {
+        "name": "kind_of_product",
+        "type": "string"
+      },
+      {
+        "name": "nb_gas_stations_analysed",
+        "type": "bigint"
+      },
+      {
+        "name": "mean_distribution_price",
+        "type": "double"
+      },
+      {
+        "name": "mdp_25w_mean_distribution_price_avg",
+        "type": "double"
+      },
+      {
+        "name": "mdp_avg_1m_25w_mean_distribution_price_avg",
+        "type": "double"
+      },
+      {
+        "name": "mdp_avg_3m_25w_mean_distribution_price_avg",
+        "type": "double"
+      },
+      {
+        "name": "oil_Date",
+        "type": "date"
+      },
+      {
+        "name": "oil_Date_week",
+        "type": "bigint"
+      },
+      {
+        "name": "oil_Price",
+        "type": "double"
+      },
+      {
+        "name": "oil_op_25w_Price_avg",
+        "type": "double"
+      },
+      {
+        "name": "oil_op_avg_1m_25w_Price_avg",
+        "type": "double"
+      },
+      {
+        "name": "oil_op_avg_3m_25w_Price_avg",
+        "type": "double"
+      },
+      {
+        "name": "static_state_full",
+        "type": "string"
+      },
+      {
+        "name": "static_city_count",
+        "type": "bigint"
+      },
+      {
+        "name": "static_human_dvpt_index_avg",
+        "type": "double"
+      },
+      {
+        "name": "static_life_exp_index_avg",
+        "type": "double"
+      },
+      {
+        "name": "static_estimated_pop_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "static_gdp_per_capita_avg",
+        "type": "double"
+      },
+      {
+        "name": "static_nb_companies_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "static_assets_private_banks_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "static_assets_public_banks_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "static_nb_cars_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "exchange_day",
+        "type": "date"
+      },
+      {
+        "name": "exchange_rate",
+        "type": "double"
+      },
+      {
+        "name": "prediction",
+        "type": "float"
+      }
+    ],
+    "userModified": true
+  },
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {
+    "gdpr_contains_personal_data": "UNSURE"
+  }
+}

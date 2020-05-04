@@ -1,0 +1,67 @@
+{
+  "type": "CustomCode_timeseries-preparation-resampling",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {
+      "time_step": 1,
+      "time_unit": "weeks",
+      "interpolation_method": "linear",
+      "extrapolation_method": "clip",
+      "clip_start": 0,
+      "clip_end": 1,
+      "shift": 0,
+      "advanced_activated": false,
+      "datetime_column": "date_start"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "input_dataset": {
+      "items": [
+        {
+          "ref": "time_series_per_state",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "output_dataset": {
+      "items": [
+        {
+          "ref": "ts_clean",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 7,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1582293998022
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1582015868891
+  },
+  "tags": [
+    "TS Cleaning"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

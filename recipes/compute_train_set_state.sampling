@@ -1,0 +1,23 @@
+{
+  "uiData": {
+    "mode": "CUSTOM",
+    "conditions": [
+      {
+        "input": "date_start",
+        "col": "region",
+        "num": 0,
+        "operator": "\u003e\u003d [date]"
+      }
+    ]
+  },
+  "expression": "static_state_full \u003d\u003d \u0027${state}\u0027",
+  "$status": {
+    "validated": true,
+    "fullyTranslated": true,
+    "ok": true,
+    "message": "Unknown DSS variable: state",
+    "sql": "\"static_state_full\" \u003d \u0027Distrito Federal\u0027"
+  },
+  "distinct": false,
+  "enabled": true
+}

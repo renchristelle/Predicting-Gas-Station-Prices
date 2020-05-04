@@ -1,0 +1,18 @@
+{
+  "gitReferences": {
+    "/python/externalRepo": {
+      "remote": "git@github.com:git1984/dataiku-git-integration.git",
+      "checkout": "refs/heads/master",
+      "remotePath": "",
+      "lastHash": "934cd31ee12f0177eee45ab77d7b61babd497244"
+    }
+  },
+  "pythonPath": [
+    "python",
+    "/python/externalRepo"
+  ],
+  "rsrcPath": [
+    "R"
+  ],
+  "importLibrariesFromProjects": []
+}

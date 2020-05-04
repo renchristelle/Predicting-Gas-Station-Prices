@@ -1,0 +1,46 @@
+{
+  "tags": {
+    "Filtering State \u0026 Product": {
+      "color": "#90a8b7"
+    },
+    "Visualization": {
+      "color": "#d66b9b"
+    },
+    "TS Cleaning": {
+      "color": "#FFD83D"
+    },
+    "Data Prep \u0026 Feature Eng.": {
+      "color": "#94be8e"
+    },
+    "recipe-editor": {
+      "color": "#1ac2ab"
+    },
+    "Pred - Visual ML": {
+      "color": "#28aadd"
+    },
+    "Folder": {
+      "color": "#123883"
+    },
+    "duplicated": {
+      "color": "#3A85AD"
+    },
+    "deleted-recipe-editor": {
+      "color": "#90a8b7"
+    },
+    "imported": {
+      "color": "#263238"
+    },
+    "Pred - Prophet": {
+      "color": "#a50000"
+    },
+    "Pred - Forecast Plugin": {
+      "color": "#00a55a"
+    },
+    "Pred - Consolidated": {
+      "color": "#de1ea5"
+    },
+    "Plugin": {
+      "color": "#28aadd"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "uiData": {
+    "mode": "\u0026\u0026",
+    "conditions": [
+      {
+        "input": "kind_of_product",
+        "col": "date_start",
+        "string": "${product}",
+        "num": 0,
+        "operator": "contains"
+      }
+    ]
+  },
+  "$status": {
+    "validated": true,
+    "fullyTranslated": false,
+    "ok": false,
+    "message": "Filter expression is invalid"
+  },
+  "distinct": false,
+  "enabled": true
+}

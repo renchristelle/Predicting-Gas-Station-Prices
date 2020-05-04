@@ -1,0 +1,22 @@
+{
+  "name": "scoring-forecast",
+  "endpoints": [
+    {
+      "modelRef": "E6QmH4wg",
+      "useJava": true,
+      "testQueries": [],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "id": "score_transaction",
+      "type": "STD_PREDICTION"
+    }
+  ],
+  "publicAccess": true,
+  "authRealm": {
+    "queryKeys": []
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

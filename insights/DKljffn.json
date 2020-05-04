@@ -1,0 +1,30 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "time_series_per_state",
+    "objectType": "DATASET",
+    "metricId": "percentile_stats:QUARTILES:mean_distribution_price"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Mean Distribution Price Quartiles",
+  "dashboardCreationId": "SNaFZif",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577463089104
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577463089104
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

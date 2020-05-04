@@ -1,0 +1,31 @@
+{
+  "type": "managed-folder_content",
+  "params": {
+    "folderSmartId": "tjt6fn1t",
+    "filePath": "/train_test.jpg",
+    "isDirectory": false
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Content of folder Docs/train_test.jpg",
+  "dashboardCreationId": "SNaFZif",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1579705547608
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1579705547608
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

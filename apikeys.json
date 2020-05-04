@@ -1,0 +1,23 @@
+[
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false
+    },
+    "id": "HEt1yBhJH5wZhILc",
+    "key": "du6SxjfG7jGU7MFkhYr8ftk2qhbCmXa6",
+    "label": "Key for Web app Update Variables(4WjVHSr)",
+    "createdOn": 1577454373342
+  }
+]

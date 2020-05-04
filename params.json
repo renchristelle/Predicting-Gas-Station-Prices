@@ -1,0 +1,419 @@
+{
+  "dashboardAuthorizations": {
+    "allAuthorized": false,
+    "authorizations": [
+      {
+        "objectRef": {
+          "objectId": "brent_oil_prices_sliding",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "stack_exchange_rates",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "brazilian_cities_prepared",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "pBesSsMB",
+          "objectType": "MANAGED_FOLDER"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "Visualization with Altair \u0026 Folium",
+          "objectType": "JUPYTER_NOTEBOOK"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "4WjVHSr",
+          "objectType": "WEB_APP"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "time_series_per_state",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "avg_median_price_state",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "tjt6fn1t",
+          "objectType": "MANAGED_FOLDER"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "final",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "brazilian_cities",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "add_exchange_rates",
+          "objectType": "DATASET"
+        },
+        "modes": []
+      },
+      {
+        "objectRef": {
+          "objectId": "exchange_rates_brazil",
+          "objectType": "DATASET"
+        },
+        "modes": []
+      }
+    ]
+  },
+  "exposedObjects": {
+    "objects": [
+      {
+        "type": "DATASET",
+        "localName": "BrentOilPrices",
+        "rules": [
+          {
+            "targetProject": "PREDICTINGGASSTATIONPRICESBRAZIL",
+            "appearOnFlow": true
+          }
+        ]
+      },
+      {
+        "type": "DATASET",
+        "localName": "cities_brazil",
+        "rules": [
+          {
+            "targetProject": "PREDICTINGGASSTATIONPRICESBRAZIL",
+            "appearOnFlow": true
+          }
+        ]
+      },
+      {
+        "type": "DATASET",
+        "localName": "gas_prices_brazil",
+        "rules": [
+          {
+            "targetProject": "PREDICTINGGASSTATIONPRICESBRAZIL",
+            "appearOnFlow": true
+          }
+        ]
+      },
+      {
+        "type": "DATASET",
+        "localName": "exchange_rates_brazil",
+        "rules": [
+          {
+            "targetProject": "PREDICTINGGASSTATIONPRICESBRAZIL",
+            "appearOnFlow": true
+          }
+        ]
+      }
+    ]
+  },
+  "projectType": "REGULAR",
+  "bundleExporterSettings": {
+    "exportOptions": {
+      "exportUploads": false,
+      "exportManagedFS": false,
+      "exportAnalysisModels": false,
+      "exportSavedModels": false,
+      "exportManagedFolders": false,
+      "exportAllInputDatasets": false,
+      "exportAllDatasets": false,
+      "exportAllInputManagedFolders": false,
+      "exportGitRepository": false,
+      "exportInsightsData": false,
+      "useManualPluginsInfo": false,
+      "includedDatasetsData": [],
+      "includedSavedModels": [],
+      "includedManagedFolders": [],
+      "shareAllInputDatasets": false
+    }
+  },
+  "owner": "admin",
+  "permissions": [],
+  "additionalDashboardUsers": {
+    "users": []
+  },
+  "tutorialProject": false,
+  "settings": {
+    "flowAnchorSourcesAndSinks": true,
+    "gitCommitMode": "AUTO",
+    "disableAutomaticTriggers": false,
+    "integrations": {
+      "integrations": []
+    },
+    "flowBuildSettings": {
+      "mergeSparkPipelines": false,
+      "pruneBeforeSparkPipelines": true,
+      "mergeSqlPipelines": false,
+      "pruneBeforeSqlPipelines": true
+    },
+    "limitsSettings": {
+      "memSampleBytes": {
+        "soft": -1,
+        "hard": -1
+      },
+      "shakerMemTableBytes": {
+        "soft": -1,
+        "hard": -1
+      },
+      "attachmentBytes": {
+        "soft": -1,
+        "hard": -1
+      }
+    },
+    "relocationSettings": {
+      "sqlLikeRecipesInitializationMode": "RESOLVED_TABLE_REFERENCES"
+    },
+    "recipeEnginesPreferences": {
+      "forbiddenEngines": [],
+      "enginesPreferenceOrder": [],
+      "forbiddenByRecipeType": {},
+      "preferenceByRecipeType": {}
+    },
+    "codeEnvs": {
+      "python": {
+        "useBuiltinEnv": true,
+        "preventOverride": false
+      },
+      "r": {
+        "useBuiltinEnv": true,
+        "preventOverride": false
+      }
+    },
+    "container": {
+      "containerMode": "NONE"
+    },
+    "datasetsCreationSettings": {
+      "useGlobal": true,
+      "preferedStorageFormats": "CSV_ESCAPING_NOGZIP_FORHIVE,CSV_EXCEL_GZIP,PARQUET_HIVE",
+      "virtualizable": false,
+      "allowUploadsWithoutConnection": true
+    },
+    "hiveEngineCreationSettings": {
+      "useGlobal": true,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "sparkEngineCreationSettings": {
+      "useGlobal": true,
+      "executionEngine": "SPARK_SUBMIT",
+      "useGlobalMetastore": false
+    },
+    "impalaEngineCreationSettings": {
+      "useGlobal": true,
+      "streamMode": true
+    },
+    "wikiSettings": {
+      "promoted": false
+    },
+    "cluster": {
+      "clusterMode": "INHERIT"
+    },
+    "k8sCluster": {
+      "clusterMode": "INHERIT"
+    },
+    "virtualWebAppBackendSettings": {
+      "mode": "INHERIT",
+      "preventOverride": false,
+      "infra": {
+        "containerSelection": {
+          "containerMode": "INHERIT"
+        },
+        "overrideGlobalK8sExposition": false,
+        "exposition": {
+          "type": "local_process",
+          "params": {}
+        },
+        "scaling": {
+          "initialReplicas": 1,
+          "hpa": false,
+          "hpaTargetCPUPercent": 0,
+          "hpaMinPods": 0,
+          "hpaMaxPods": 0
+        }
+      }
+    }
+  },
+  "name": "DEMO Predicting Gas Station Prices",
+  "imgPattern": 3,
+  "metrics": {
+    "probes": [],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": []
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "versionTag": {
+    "versionNumber": 107,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1588609348810
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1574357562414
+  },
+  "description": "## Prediction of the Gas Price in stations, Brazil\n\nThe goal is to predict the average price of the gas per state in Brazil per week.\n\nOn Monday, we would like to know what will be the average price from Monday to Friday depending on Monday\u0027s exchange rate, Monday\u0027s oil price, historical data and socio-demo data per state\n\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/PREDICTINGGASSTATIONPRICES/dashboards/SNaFZif_predicting-gas-station-prices/view/9gSncDc\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Access to Dashboard\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e",
+  "shortDesc": "Project created in 2019\nThe project *DEMOPREDICTINGGASSTATIONPRICES* was copied from *PREDICTINGGASSTATIONPRICES* by Administrator on Mar 13th 2020",
+  "tags": [
+    "imported",
+    "duplicated"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": [
+      {
+        "id": "41eedf",
+        "title": "Todo list",
+        "createdOn": 0,
+        "items": [
+          {
+            "done": true,
+            "text": "Python recipe to catch oil prices everyday",
+            "createdOn": 1576743520684,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Compare the chosen model with the time series plugin",
+            "createdOn": 1576743536897,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Scenarios to be run everyday (add conditions potentially)",
+            "createdOn": 1576743561603,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Find a use case for partitioning",
+            "createdOn": 1576743571320,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "Find a use case for deployment",
+            "createdOn": 1576743584002,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Do the modeling in R (ARIMA)",
+            "createdOn": 1577704351065,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          }
+        ]
+      }
+    ]
+  }
+}

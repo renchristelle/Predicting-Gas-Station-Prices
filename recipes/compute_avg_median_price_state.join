@@ -1,0 +1,327 @@
+{
+  "joins": [
+    {
+      "table2": 1,
+      "table1": 0,
+      "conditionsMode": "AND",
+      "rightLimit": {
+        "decisionColumn": {}
+      },
+      "type": "LEFT",
+      "outerJoinOnTheLeft": true,
+      "on": [
+        {
+          "column1": {
+            "name": "date_start_",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "column2": {
+            "name": "date_start_",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 1,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false
+        }
+      ]
+    }
+  ],
+  "selectedColumns": [
+    {
+      "name": "baseline",
+      "type": "double",
+      "table": 0
+    },
+    {
+      "name": "date_start",
+      "type": "date",
+      "table": 1
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "table": 1
+    },
+    {
+      "name": "gas_state",
+      "type": "string",
+      "table": 1
+    },
+    {
+      "name": "kind_of_product",
+      "type": "string",
+      "table": 1
+    },
+    {
+      "name": "nb_gas_stations_analysed",
+      "type": "bigint",
+      "table": 1
+    },
+    {
+      "name": "mean_distribution_price",
+      "type": "float",
+      "table": 1
+    },
+    {
+      "name": "oil_Date",
+      "type": "date",
+      "table": 1
+    },
+    {
+      "name": "oil_Date_week",
+      "type": "bigint",
+      "table": 1
+    },
+    {
+      "name": "oil_Price",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "oil_op_25w_Price_avg",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "oil_op_avg_1m_25w_Price_avg",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "oil_op_avg_3m_25w_Price_avg",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "static_state_full",
+      "type": "string",
+      "table": 1
+    },
+    {
+      "name": "static_city_count",
+      "type": "bigint",
+      "table": 1
+    },
+    {
+      "name": "static_human_dvpt_index_avg",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "static_life_exp_index_avg",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "static_estimated_pop_sum",
+      "type": "bigint",
+      "table": 1
+    },
+    {
+      "name": "static_gdp_per_capita_avg",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "static_nb_companies_sum",
+      "type": "bigint",
+      "table": 1
+    },
+    {
+      "name": "static_assets_private_banks_sum",
+      "type": "bigint",
+      "table": 1
+    },
+    {
+      "name": "static_assets_public_banks_sum",
+      "type": "bigint",
+      "table": 1
+    },
+    {
+      "name": "static_nb_cars_sum",
+      "type": "bigint",
+      "table": 1
+    },
+    {
+      "name": "exchange_day",
+      "type": "date",
+      "table": 1
+    },
+    {
+      "name": "exchange_rate",
+      "type": "double",
+      "table": 1
+    }
+  ],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "virtualInputs": [
+    {
+      "index": 1,
+      "computedColumns": [
+        {
+          "mode": "SQL",
+          "name": "date_start_",
+          "expr": "date_start::date",
+          "type": "date"
+        }
+      ]
+    },
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "autoSelectColumns": false,
+      "index": 0,
+      "computedColumns": [
+        {
+          "mode": "SQL",
+          "name": "date_start_",
+          "expr": "date_start::date",
+          "type": "date"
+        }
+      ]
+    }
+  ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "baseline",
+            "type": "double"
+          },
+          {
+            "name": "date_start",
+            "type": "date"
+          },
+          {
+            "name": "region",
+            "type": "string"
+          },
+          {
+            "name": "gas_state",
+            "type": "string"
+          },
+          {
+            "name": "kind_of_product",
+            "comment": "",
+            "type": "string"
+          },
+          {
+            "name": "nb_gas_stations_analysed",
+            "type": "bigint"
+          },
+          {
+            "name": "mean_distribution_price",
+            "type": "float"
+          },
+          {
+            "name": "oil_Date",
+            "type": "date"
+          },
+          {
+            "name": "oil_Date_week",
+            "type": "bigint"
+          },
+          {
+            "name": "oil_Price",
+            "type": "double"
+          },
+          {
+            "name": "oil_op_25w_Price_avg",
+            "type": "double"
+          },
+          {
+            "name": "oil_op_avg_1m_25w_Price_avg",
+            "type": "double"
+          },
+          {
+            "name": "oil_op_avg_3m_25w_Price_avg",
+            "type": "double"
+          },
+          {
+            "name": "static_state_full",
+            "type": "string"
+          },
+          {
+            "name": "static_city_count",
+            "type": "bigint"
+          },
+          {
+            "name": "static_human_dvpt_index_avg",
+            "type": "double"
+          },
+          {
+            "name": "static_life_exp_index_avg",
+            "type": "double"
+          },
+          {
+            "name": "static_estimated_pop_sum",
+            "type": "bigint"
+          },
+          {
+            "name": "static_gdp_per_capita_avg",
+            "type": "double"
+          },
+          {
+            "name": "static_nb_companies_sum",
+            "type": "bigint"
+          },
+          {
+            "name": "static_assets_private_banks_sum",
+            "type": "bigint"
+          },
+          {
+            "name": "static_assets_public_banks_sum",
+            "type": "bigint"
+          },
+          {
+            "name": "static_nb_cars_sum",
+            "type": "bigint"
+          },
+          {
+            "name": "exchange_day",
+            "type": "date"
+          },
+          {
+            "name": "exchange_rate",
+            "type": "double"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
+  "enableAutoCastInJoinConditions": false
+}

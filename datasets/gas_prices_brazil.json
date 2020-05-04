@@ -1,0 +1,259 @@
+{
+  "type": "UploadedFiles",
+  "managed": false,
+  "description": "The National Agency of Petroleum, Natural Gas and Bio fuels (ANP in Portuguese) releases weekly reports of gas, diesel and other fuels prices used in transportation across the country. These datasets bring the mean value per liter, number of gas stations analyzed and other information grouped by regions and states across the country.\n\nPeriod: 2004-05-10 - 2019-06-23",
+  "shortDesc": "Extract from Kaggle: [Gas Prices in Brazil](https://www.kaggle.com/matheusfreitag/gas-prices-in-brazil)",
+  "formatType": "csv",
+  "checklists": {
+    "checklists": []
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "formatParams": {
+    "style": "excel",
+    "charset": "utf8",
+    "separator": "\t",
+    "quoteChar": "\"",
+    "escapeChar": "\\",
+    "dateSerializationFormat": "ISO",
+    "arrayMapFormat": "json",
+    "hiveSeparators": [
+      "\u0002",
+      "\u0003",
+      "\u0004",
+      "\u0005",
+      "\u0006",
+      "\u0007",
+      "\b"
+    ],
+    "skipRowsBeforeHeader": 1,
+    "parseHeaderRow": false,
+    "skipRowsAfterHeader": 0,
+    "probableNumberOfRecords": 21,
+    "normalizeBooleans": false,
+    "normalizeDoubles": true,
+    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+    "readMissingColumnsBehavior": "DISCARD_SILENT",
+    "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "fileReadFailureBehavior": "FAIL",
+    "compress": ""
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 9,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1584114683048
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1574359488428
+  },
+  "tags": [
+    "Data Prep \u0026 Feature Eng."
+  ],
+  "params": {
+    "uploadConnection": "Default (in DSS data dir.)",
+    "notReadyIfEmpty": false,
+    "filesSelectionRules": {
+      "mode": "ALL",
+      "excludeRules": [],
+      "includeRules": [],
+      "explicitFiles": []
+    }
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "col_0",
+        "type": "string"
+      },
+      {
+        "name": "DATA INICIAL",
+        "type": "string"
+      },
+      {
+        "name": "DATA FINAL",
+        "type": "string"
+      },
+      {
+        "name": "REGIÃO",
+        "type": "string"
+      },
+      {
+        "name": "ESTADO",
+        "type": "string"
+      },
+      {
+        "name": "PRODUTO",
+        "type": "string"
+      },
+      {
+        "name": "NÚMERO DE POSTOS PESQUISADOS",
+        "type": "string"
+      },
+      {
+        "name": "UNIDADE DE MEDIDA",
+        "type": "string"
+      },
+      {
+        "name": "PREÇO MÉDIO REVENDA",
+        "type": "string"
+      },
+      {
+        "name": "DESVIO PADRÃO REVENDA",
+        "type": "string"
+      },
+      {
+        "name": "PREÇO MÍNIMO REVENDA",
+        "type": "string"
+      },
+      {
+        "name": "PREÇO MÁXIMO REVENDA",
+        "type": "string"
+      },
+      {
+        "name": "MARGEM MÉDIA REVENDA",
+        "type": "string"
+      },
+      {
+        "name": "COEF DE VARIAÇÃO REVENDA",
+        "type": "string"
+      },
+      {
+        "name": "PREÇO MÉDIO DISTRIBUIÇÃO",
+        "type": "string"
+      },
+      {
+        "name": "DESVIO PADRÃO DISTRIBUIÇÃO",
+        "type": "string"
+      },
+      {
+        "name": "PREÇO MÍNIMO DISTRIBUIÇÃO",
+        "type": "string"
+      },
+      {
+        "name": "PREÇO MÁXIMO DISTRIBUIÇÃO",
+        "type": "string"
+      },
+      {
+        "name": "COEF DE VARIAÇÃO DISTRIBUIÇÃO",
+        "type": "string"
+      },
+      {
+        "name": "MÊS",
+        "type": "string"
+      },
+      {
+        "name": "ANO",
+        "type": "string"
+      }
+    ],
+    "userModified": true
+  },
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "basic:COUNT_FILES",
+        "basic:SIZE",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {}
+}

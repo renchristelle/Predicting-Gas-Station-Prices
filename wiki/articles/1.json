@@ -1,0 +1,23 @@
+{
+    "layout": "WIKI_ARTICLE", 
+    "attachments": [], 
+    "versionTag": {
+        "lastModifiedBy": {
+            "login": "admin"
+        }, 
+        "lastModifiedOn": 1577364965050, 
+        "versionNumber": 1
+    }, 
+    "tags": [], 
+    "creationTag": {
+        "lastModifiedBy": {
+            "login": "admin"
+        }, 
+        "lastModifiedOn": 1577364960726, 
+        "versionNumber": 0
+    }, 
+    "checklists": {
+        "checklists": []
+    }, 
+    "name": "Introduction"
+}

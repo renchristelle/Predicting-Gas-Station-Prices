@@ -1,0 +1,30 @@
+{
+  "type": "managed-folder_content",
+  "params": {
+    "folderSmartId": "pBesSsMB",
+    "filePath": "/Evolution_of_the_Etanol_prices.html",
+    "isDirectory": false
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Content of folder Insights/Evolution_of_the_Etanol_prices.html",
+  "dashboardCreationId": "SNaFZif",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577374675182
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577374675182
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

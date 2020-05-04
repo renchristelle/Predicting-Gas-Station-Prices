@@ -1,0 +1,414 @@
+{
+  "type": "PostgreSQL",
+  "managed": true,
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 19,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1582015325276
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577453355152
+  },
+  "tags": [
+    "Filtering State \u0026 Product"
+  ],
+  "params": {
+    "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
+    "connection": "postgres_dev",
+    "notReadyIfEmpty": false,
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${projectKey}_time_series_per_state",
+    "schema": "dataiku_all",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "readColsWithUnknownTzAsDates": false,
+    "readSQLDateColsAsDSSDates": true
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "date_start",
+        "type": "date"
+      },
+      {
+        "name": "date_end",
+        "type": "date"
+      },
+      {
+        "name": "region",
+        "type": "string"
+      },
+      {
+        "name": "gas_state",
+        "type": "string"
+      },
+      {
+        "name": "kind_of_product",
+        "type": "string",
+        "comment": ""
+      },
+      {
+        "name": "nb_gas_stations_analysed",
+        "type": "bigint"
+      },
+      {
+        "name": "mean_distribution_price",
+        "type": "float"
+      },
+      {
+        "name": "mdp_25w_mean_distribution_price_avg",
+        "type": "double"
+      },
+      {
+        "name": "mdp_avg_1m_25w_mean_distribution_price_avg",
+        "type": "double"
+      },
+      {
+        "name": "mdp_avg_3m_25w_mean_distribution_price_avg",
+        "type": "double"
+      },
+      {
+        "name": "oil_Date",
+        "type": "date"
+      },
+      {
+        "name": "oil_Date_week",
+        "type": "bigint"
+      },
+      {
+        "name": "oil_Price",
+        "type": "double"
+      },
+      {
+        "name": "oil_op_25w_Price_avg",
+        "type": "double"
+      },
+      {
+        "name": "oil_op_avg_1m_25w_Price_avg",
+        "type": "double"
+      },
+      {
+        "name": "oil_op_avg_3m_25w_Price_avg",
+        "type": "double"
+      },
+      {
+        "name": "static_state_full",
+        "type": "string"
+      },
+      {
+        "name": "static_city_count",
+        "type": "bigint"
+      },
+      {
+        "name": "static_human_dvpt_index_avg",
+        "type": "double"
+      },
+      {
+        "name": "static_life_exp_index_avg",
+        "type": "double"
+      },
+      {
+        "name": "static_estimated_pop_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "static_gdp_per_capita_avg",
+        "type": "double"
+      },
+      {
+        "name": "static_nb_companies_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "static_assets_private_banks_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "static_assets_public_banks_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "static_nb_cars_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "exchange_day",
+        "type": "date"
+      },
+      {
+        "name": "exchange_rate",
+        "type": "double"
+      }
+    ],
+    "userModified": true
+  },
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "col_stats",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Columns statistics",
+          "level": 2
+        },
+        "configuration": {
+          "aggregates": [
+            {
+              "column": "nb_gas_stations_analysed",
+              "aggregated": "MEAN"
+            },
+            {
+              "column": "mean_distribution_price",
+              "aggregated": "MEAN"
+            }
+          ]
+        }
+      },
+      {
+        "type": "adv_col_stats",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Most frequent values",
+          "level": 3
+        },
+        "configuration": {
+          "aggregates": [
+            {
+              "column": "region",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "kind_of_product",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "static_state_full",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "static_city_count",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "static_human_dvpt_index_avg",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "static_life_exp_index_avg",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "static_estimated_pop_sum",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "static_gdp_per_capita_avg",
+              "aggregated": "MODE"
+            },
+            {
+              "column": "static_nb_cars_sum",
+              "aggregated": "MODE"
+            }
+          ]
+        }
+      },
+      {
+        "type": "percentile_stats",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Columns percentiles",
+          "level": 4
+        },
+        "configuration": {
+          "aggregates": [
+            {
+              "column": "mean_distribution_price",
+              "aggregated": "P25"
+            },
+            {
+              "column": "mean_distribution_price",
+              "aggregated": "P50"
+            },
+            {
+              "column": "mean_distribution_price",
+              "aggregated": "P75"
+            }
+          ]
+        }
+      },
+      {
+        "type": "verify_col",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Data validity",
+          "level": 4
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      },
+      {
+        "type": "cell",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Cell value",
+          "level": 9
+        },
+        "configuration": {
+          "mode": "SINGLE_CELL_STRICT",
+          "filter": {
+            "distinct": false,
+            "enabled": false,
+            "uiData": {
+              "mode": "\u0026\u0026",
+              "conditions": [
+                {
+                  "input": "date_start",
+                  "operator": "\u003e\u003d [date]",
+                  "col": "date_end",
+                  "num": 0.0
+                }
+              ]
+            }
+          },
+          "columns": [
+            "mean_distribution_price"
+          ]
+        }
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "partition": "NP",
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "records:COUNT_RECORDS",
+        "reporting:BUILD_START_DATE",
+        "reporting:BUILD_DURATION",
+        "reporting:WARNING_COUNT",
+        "reporting:BUILD_SUCCESS",
+        "reporting:METRICS_COMPUTATION_DURATION",
+        "col_stats:MEAN:nb_gas_stations_analysed",
+        "adv_col_stats:MODE:region",
+        "adv_col_stats:MODE:static_city_count",
+        "adv_col_stats:MODE:static_estimated_pop_sum",
+        "adv_col_stats:MODE:static_gdp_per_capita_avg",
+        "adv_col_stats:MODE:static_human_dvpt_index_avg",
+        "adv_col_stats:MODE:static_life_exp_index_avg",
+        "adv_col_stats:MODE:static_nb_cars_sum",
+        "adv_col_stats:MODE:static_state_full",
+        "percentile_stats:P50:mean_distribution_price",
+        "adv_col_stats:MODE:kind_of_product",
+        "percentile_stats:QUARTILES:mean_distribution_price",
+        "col_stats:MEAN:mean_distribution_price",
+        "percentile_stats:P25:mean_distribution_price",
+        "percentile_stats:P75:mean_distribution_price"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "partition": "NP",
+      "checks": []
+    }
+  },
+  "customFields": {}
+}

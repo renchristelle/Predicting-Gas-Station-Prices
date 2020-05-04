@@ -1,0 +1,318 @@
+{
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "ntileValues": "10",
+  "keys": [],
+  "values": [
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "date_start",
+      "count": false,
+      "$idx": 0,
+      "sum": false,
+      "concat": false,
+      "type": "date",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "date_end",
+      "count": false,
+      "$idx": 1,
+      "sum": false,
+      "concat": false,
+      "type": "date",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "region",
+      "count": false,
+      "$idx": 2,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "state",
+      "count": false,
+      "$idx": 3,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "kind_of_product",
+      "count": false,
+      "$idx": 4,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "nb_gas_stations_analysed",
+      "count": false,
+      "$idx": 5,
+      "sum": false,
+      "concat": false,
+      "type": "bigint",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "mean_distribution_price",
+      "count": false,
+      "$idx": 6,
+      "sum": false,
+      "concat": false,
+      "type": "float",
+      "lead": false,
+      "min": false,
+      "avg": true,
+      "lag": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    }
+  ],
+  "windows": [
+    {
+      "windowLimitMode": "RANGE",
+      "windowUpperBound": -25,
+      "enablePartitioning": true,
+      "prefix": "mdp_25w",
+      "enableOrdering": true,
+      "limitFollowing": true,
+      "windowDateRangeUnit": "WEEK",
+      "orders": [
+        {
+          "column": "date_start",
+          "desc": false
+        }
+      ],
+      "limitPreceding": true,
+      "windowLowerBound": 25,
+      "enableLimits": true,
+      "partitioningColumns": [
+        "state",
+        "kind_of_product"
+      ]
+    },
+    {
+      "windowLimitMode": "RANGE",
+      "windowUpperBound": -25,
+      "enablePartitioning": true,
+      "prefix": "mdp_avg_1m_25w",
+      "enableOrdering": true,
+      "limitFollowing": true,
+      "windowDateRangeUnit": "WEEK",
+      "orders": [
+        {
+          "column": "date_start",
+          "desc": false
+        }
+      ],
+      "limitPreceding": true,
+      "windowLowerBound": 28,
+      "enableLimits": true,
+      "partitioningColumns": [
+        "state",
+        "kind_of_product"
+      ]
+    },
+    {
+      "windowLimitMode": "RANGE",
+      "windowUpperBound": -25,
+      "enablePartitioning": true,
+      "prefix": "mdp_avg_3m_25w",
+      "enableOrdering": true,
+      "limitFollowing": true,
+      "windowDateRangeUnit": "WEEK",
+      "orders": [
+        {
+          "column": "date_start",
+          "desc": false
+        }
+      ],
+      "limitPreceding": true,
+      "windowLowerBound": 36,
+      "enableLimits": true,
+      "partitioningColumns": [
+        "state",
+        "kind_of_product"
+      ]
+    }
+  ],
+  "computedColumns": [],
+  "postFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "conditions": [
+        {
+          "input": "date_start",
+          "col": "region",
+          "num": 1,
+          "operator": "\u003e\u003d [date]"
+        }
+      ]
+    },
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "date_start",
+            "type": "date"
+          },
+          {
+            "name": "date_end",
+            "type": "date"
+          },
+          {
+            "name": "region",
+            "type": "string"
+          },
+          {
+            "name": "state",
+            "type": "string"
+          },
+          {
+            "name": "kind_of_product",
+            "comment": "",
+            "type": "string"
+          },
+          {
+            "name": "nb_gas_stations_analysed",
+            "type": "bigint"
+          },
+          {
+            "name": "mean_distribution_price",
+            "type": "float"
+          },
+          {
+            "name": "mdp_25w_mean_distribution_price_avg",
+            "type": "double"
+          },
+          {
+            "name": "mdp_avg_1m_25w_mean_distribution_price_avg",
+            "type": "double"
+          },
+          {
+            "name": "mdp_avg_3m_25w_mean_distribution_price_avg",
+            "type": "double"
+          }
+        ],
+        "userModified": false
+      },
+      "validated": true,
+      "fullyTranslated": false,
+      "ok": false,
+      "message": "Filter expression is invalid"
+    },
+    "distinct": false,
+    "enabled": false
+  },
+  "cumeDist": false,
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "ntile": false,
+  "rank": false,
+  "denseRank": false,
+  "rowNumber": false,
+  "outputColumnNameOverrides": {}
+}

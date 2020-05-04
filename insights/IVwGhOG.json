@@ -1,0 +1,30 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "time_series_per_state",
+    "objectType": "DATASET",
+    "metricId": "percentile_stats:P25:mean_distribution_price"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Q1 Mean Distribution Price",
+  "dashboardCreationId": "SNaFZif",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577463569927
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577463569927
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

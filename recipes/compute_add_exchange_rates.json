@@ -1,0 +1,51 @@
+{
+  "type": "python",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "envSelection": {
+      "envMode": "INHERIT"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    },
+    "skipPrerunValidate": false
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {},
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "add_exchange_rates",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 56,
+    "lastModifiedBy": {
+      "login": "api:ufHDKsNJch9UUJlA"
+    },
+    "lastModifiedOn": 1585129352096
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1576744473908
+  },
+  "tags": [
+    "Data Prep \u0026 Feature Eng."
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

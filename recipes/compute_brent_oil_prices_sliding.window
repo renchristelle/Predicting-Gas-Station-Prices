@@ -1,0 +1,275 @@
+{
+  "preFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "conditions": [
+        {
+          "input": "Date_week",
+          "col": "Date_year",
+          "num": 1,
+          "operator": "\u003d\u003d [number]"
+        }
+      ]
+    },
+    "$status": {
+      "validated": true,
+      "fullyTranslated": false,
+      "ok": false,
+      "message": "Filter expression is invalid"
+    },
+    "distinct": false,
+    "enabled": true
+  },
+  "ntileValues": "10",
+  "keys": [],
+  "values": [
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "Date",
+      "count": false,
+      "$idx": 0,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "date",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "column": "Date_year",
+      "count": false,
+      "$idx": 1,
+      "sum": false,
+      "concat": false,
+      "type": "bigint",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": false,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "column": "Date_week_of_year",
+      "count": false,
+      "$idx": 2,
+      "sum": false,
+      "concat": false,
+      "type": "bigint",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": false,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "column": "Date_week",
+      "count": false,
+      "$idx": 3,
+      "sum": false,
+      "concat": false,
+      "type": "bigint",
+      "lead": false,
+      "min": false,
+      "avg": false,
+      "lag": false,
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "lagDiff": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "Price",
+      "count": false,
+      "$idx": 4,
+      "lagValues": "1",
+      "sum": false,
+      "concat": false,
+      "type": "double",
+      "lead": false,
+      "concatDistinct": false,
+      "dateDiffUnit": "DAY",
+      "min": false,
+      "countDistinct": false,
+      "avg": true,
+      "lag": false,
+      "leadValues": "1",
+      "stddev": false,
+      "value": true,
+      "leadDiff": false,
+      "first": false
+    }
+  ],
+  "windows": [
+    {
+      "windowLimitMode": "RANGE",
+      "windowUpperBound": -25,
+      "enablePartitioning": false,
+      "prefix": "op_25w",
+      "enableOrdering": true,
+      "windowDateRangeUnit": "WEEK",
+      "limitFollowing": true,
+      "orders": [
+        {
+          "column": "Date",
+          "desc": false
+        }
+      ],
+      "limitPreceding": true,
+      "windowLowerBound": 25,
+      "enableLimits": true,
+      "partitioningColumns": [
+        "Date"
+      ]
+    },
+    {
+      "windowLimitMode": "RANGE",
+      "windowUpperBound": -25,
+      "prefix": "op_avg_1m_25w",
+      "enableOrdering": true,
+      "limitFollowing": true,
+      "windowDateRangeUnit": "WEEK",
+      "orders": [
+        {
+          "column": "Date",
+          "desc": false
+        }
+      ],
+      "limitPreceding": true,
+      "windowLowerBound": 28,
+      "enableLimits": true
+    },
+    {
+      "windowLimitMode": "RANGE",
+      "windowUpperBound": -25,
+      "prefix": "op_avg_3m_25w",
+      "enableOrdering": true,
+      "precedingRows": 1,
+      "limitFollowing": true,
+      "windowDateRangeUnit": "WEEK",
+      "orders": [
+        {
+          "column": "Date",
+          "desc": false
+        }
+      ],
+      "limitPreceding": true,
+      "windowLowerBound": 36,
+      "enableLimits": true
+    }
+  ],
+  "computedColumns": [],
+  "postFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "conditions": [
+        {
+          "input": "Date_week",
+          "col": "Price",
+          "num": 1,
+          "operator": "\u003d\u003d [number]"
+        }
+      ]
+    },
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "Date",
+            "type": "date"
+          },
+          {
+            "name": "Date_week",
+            "type": "bigint"
+          },
+          {
+            "name": "Price",
+            "type": "double"
+          },
+          {
+            "name": "op_25w_Price_avg",
+            "type": "double"
+          },
+          {
+            "name": "op_avg_1m_25w_Price_avg",
+            "type": "double"
+          },
+          {
+            "name": "op_avg_3m_25w_Price_avg",
+            "type": "double"
+          }
+        ],
+        "userModified": false
+      },
+      "validated": true,
+      "fullyTranslated": false,
+      "ok": false,
+      "message": "Filter expression is invalid"
+    },
+    "distinct": false,
+    "enabled": false
+  },
+  "cumeDist": false,
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "ntile": false,
+  "rank": false,
+  "denseRank": false,
+  "rowNumber": false,
+  "outputColumnNameOverrides": {}
+}

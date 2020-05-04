@@ -1,0 +1,500 @@
+{
+  "type": "Filesystem",
+  "managed": false,
+  "description": "Brazil is the world\u0027s fifth-largest country by area, with 8.5 million square kilometer, and the fifth most populous, with over 208 million people.\n\nThe Federative Republic of Brazil is composed of the union of the 26 states, the Federal District, and the 5,570 municipalities.\n\nThis dataset is a compilation of several publicly available information about Brazilian Municipalities.",
+  "shortDesc": "Extract from Kaggle: [Brazilian Cities](https://www.kaggle.com/crisparada/brazilian-cities)",
+  "formatType": "csv",
+  "checklists": {
+    "checklists": []
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "formatParams": {
+    "style": "excel",
+    "charset": "utf8",
+    "separator": ";",
+    "quoteChar": "\"",
+    "escapeChar": "\\",
+    "dateSerializationFormat": "ISO",
+    "arrayMapFormat": "json",
+    "hiveSeparators": [
+      "\u0002",
+      "\u0003",
+      "\u0004",
+      "\u0005",
+      "\u0006",
+      "\u0007",
+      "\b"
+    ],
+    "skipRowsBeforeHeader": 0,
+    "parseHeaderRow": true,
+    "skipRowsAfterHeader": 0,
+    "probableNumberOfRecords": 81,
+    "normalizeBooleans": false,
+    "normalizeDoubles": true,
+    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+    "readMissingColumnsBehavior": "DISCARD_SILENT",
+    "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "fileReadFailureBehavior": "FAIL",
+    "compress": ""
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 4,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1584114622785
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577353180666
+  },
+  "tags": [
+    "Data Prep \u0026 Feature Eng."
+  ],
+  "params": {
+    "connection": "filesystem_managed",
+    "path": "/PREDICTINGGASSTATIONPRICESBRAZIL.cities_brazil",
+    "notReadyIfEmpty": false,
+    "filesSelectionRules": {
+      "mode": "ALL",
+      "excludeRules": [],
+      "includeRules": [],
+      "explicitFiles": []
+    }
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "CITY",
+        "type": "string"
+      },
+      {
+        "name": "STATE",
+        "type": "string"
+      },
+      {
+        "name": "CAPITAL",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_RES_POP",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_RES_POP_BRAS",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_RES_POP_ESTR",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_DU",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_DU_URBAN",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_DU_RURAL",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_POP",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_1",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_1-4",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_5-9",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_10-14",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_15-59",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_60+",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_PLANTED_AREA",
+        "type": "string"
+      },
+      {
+        "name": "IBGE_CROP_PRODUCTION_$",
+        "type": "string"
+      },
+      {
+        "name": "IDHM Ranking 2010",
+        "type": "string"
+      },
+      {
+        "name": "IDHM",
+        "type": "string"
+      },
+      {
+        "name": "IDHM_Renda",
+        "type": "string"
+      },
+      {
+        "name": "IDHM_Longevidade",
+        "type": "string"
+      },
+      {
+        "name": "IDHM_Educacao",
+        "type": "string"
+      },
+      {
+        "name": "LONG",
+        "type": "string"
+      },
+      {
+        "name": "LAT",
+        "type": "string"
+      },
+      {
+        "name": "ALT",
+        "type": "string"
+      },
+      {
+        "name": "PAY_TV",
+        "type": "string"
+      },
+      {
+        "name": "FIXED_PHONES",
+        "type": "string"
+      },
+      {
+        "name": "AREA",
+        "type": "string"
+      },
+      {
+        "name": "REGIAO_TUR",
+        "type": "string"
+      },
+      {
+        "name": "CATEGORIA_TUR",
+        "type": "string"
+      },
+      {
+        "name": "ESTIMATED_POP",
+        "type": "string"
+      },
+      {
+        "name": "RURAL_URBAN",
+        "type": "string"
+      },
+      {
+        "name": "GVA_AGROPEC",
+        "type": "string"
+      },
+      {
+        "name": "GVA_INDUSTRY",
+        "type": "string"
+      },
+      {
+        "name": "GVA_SERVICES",
+        "type": "string"
+      },
+      {
+        "name": "GVA_PUBLIC",
+        "type": "string"
+      },
+      {
+        "name": "GVA_TOTAL",
+        "type": "string"
+      },
+      {
+        "name": "TAXES",
+        "type": "string"
+      },
+      {
+        "name": "GDP",
+        "type": "string"
+      },
+      {
+        "name": "POP_GDP",
+        "type": "string"
+      },
+      {
+        "name": "GDP_CAPITA",
+        "type": "string"
+      },
+      {
+        "name": "GVA_MAIN",
+        "type": "string"
+      },
+      {
+        "name": "MUN_EXPENDIT",
+        "type": "string"
+      },
+      {
+        "name": "COMP_TOT",
+        "type": "string"
+      },
+      {
+        "name": "COMP_A",
+        "type": "string"
+      },
+      {
+        "name": "COMP_B",
+        "type": "string"
+      },
+      {
+        "name": "COMP_C",
+        "type": "string"
+      },
+      {
+        "name": "COMP_D",
+        "type": "string"
+      },
+      {
+        "name": "COMP_E",
+        "type": "string"
+      },
+      {
+        "name": "COMP_F",
+        "type": "string"
+      },
+      {
+        "name": "COMP_G",
+        "type": "string"
+      },
+      {
+        "name": "COMP_H",
+        "type": "string"
+      },
+      {
+        "name": "COMP_I",
+        "type": "string"
+      },
+      {
+        "name": "COMP_J",
+        "type": "string"
+      },
+      {
+        "name": "COMP_K",
+        "type": "string"
+      },
+      {
+        "name": "COMP_L",
+        "type": "string"
+      },
+      {
+        "name": "COMP_M",
+        "type": "string"
+      },
+      {
+        "name": "COMP_N",
+        "type": "string"
+      },
+      {
+        "name": "COMP_O",
+        "type": "string"
+      },
+      {
+        "name": "COMP_P",
+        "type": "string"
+      },
+      {
+        "name": "COMP_Q",
+        "type": "string"
+      },
+      {
+        "name": "COMP_R",
+        "type": "string"
+      },
+      {
+        "name": "COMP_S",
+        "type": "string"
+      },
+      {
+        "name": "COMP_T",
+        "type": "string"
+      },
+      {
+        "name": "COMP_U",
+        "type": "string"
+      },
+      {
+        "name": "HOTELS",
+        "type": "string"
+      },
+      {
+        "name": "BEDS",
+        "type": "string"
+      },
+      {
+        "name": "Pr_Agencies",
+        "type": "string"
+      },
+      {
+        "name": "Pu_Agencies",
+        "type": "string"
+      },
+      {
+        "name": "Pr_Bank",
+        "type": "string"
+      },
+      {
+        "name": "Pu_Bank",
+        "type": "string"
+      },
+      {
+        "name": "Pr_Assets",
+        "type": "string"
+      },
+      {
+        "name": "Pu_Assets",
+        "type": "string"
+      },
+      {
+        "name": "Cars",
+        "type": "string"
+      },
+      {
+        "name": "Motorcycles",
+        "type": "string"
+      },
+      {
+        "name": "Wheeled_tractor",
+        "type": "string"
+      },
+      {
+        "name": "UBER",
+        "type": "string"
+      },
+      {
+        "name": "MAC",
+        "type": "string"
+      },
+      {
+        "name": "WAL-MART",
+        "type": "string"
+      },
+      {
+        "name": "POST_OFFICES",
+        "type": "string"
+      }
+    ],
+    "userModified": true
+  },
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "basic:COUNT_FILES",
+        "basic:SIZE",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {}
+}

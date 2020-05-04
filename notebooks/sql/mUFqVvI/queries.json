@@ -1,0 +1,50 @@
+{
+  "queries": {
+    "08vbaoda64yg": [
+      {
+        "mode": "SQL",
+        "id": "o3VJRTF5BTPc",
+        "runOn": 1579721593665,
+        "runIn": 273,
+        "runBy": "admin",
+        "connection": "dataiku",
+        "state": "DONE",
+        "futureId": "p4SQ448A",
+        "hash": "82617d160cbb0bba136bbfd3d3456e26",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "SELECT \n    \"day\" AS \"day\",\n    \"exchange_rate\" AS \"exchange_rate\"\n  FROM \"dataiku_all\".\"PREDICTINGGASSTATIONPRICES_add_exchange_rates\"\nUNION ALL\nSELECT \n    \"day\" AS \"day\",\n    \"exchange_rate\" AS \"exchange_rate\"\n  FROM \"dataiku_all\".\"PREDICTINGGASSTATIONPRICES_exchange_rates_prepared\"",
+        "expandedSql": "SELECT \n    \"day\" AS \"day\",\n    \"exchange_rate\" AS \"exchange_rate\"\n  FROM \"dataiku_all\".\"PREDICTINGGASSTATIONPRICES_add_exchange_rates\"\nUNION ALL\nSELECT \n    \"day\" AS \"day\",\n    \"exchange_rate\" AS \"exchange_rate\"\n  FROM \"dataiku_all\".\"PREDICTINGGASSTATIONPRICES_exchange_rates_prepared\""
+      },
+      {
+        "mode": "SQL",
+        "id": "dV5xkbfUBOPo",
+        "runOn": 1579721608450,
+        "runIn": 48,
+        "runBy": "admin",
+        "connection": "dataiku",
+        "state": "DONE",
+        "futureId": "amjf3uPG",
+        "hash": "82617d160cbb0bba136bbfd3d3456e26",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "SELECT \n    \"day\" AS \"day\",\n    \"exchange_rate\" AS \"exchange_rate\"\n  FROM \"dataiku_all\".\"PREDICTINGGASSTATIONPRICES_add_exchange_rates\"\nUNION ALL\nSELECT \n    \"day\" AS \"day\",\n    \"exchange_rate\" AS \"exchange_rate\"\n  FROM \"dataiku_all\".\"PREDICTINGGASSTATIONPRICES_exchange_rates_prepared\"",
+        "expandedSql": "SELECT \n    \"day\" AS \"day\",\n    \"exchange_rate\" AS \"exchange_rate\"\n  FROM \"dataiku_all\".\"PREDICTINGGASSTATIONPRICES_add_exchange_rates\"\nUNION ALL\nSELECT \n    \"day\" AS \"day\",\n    \"exchange_rate\" AS \"exchange_rate\"\n  FROM \"dataiku_all\".\"PREDICTINGGASSTATIONPRICES_exchange_rates_prepared\""
+      }
+    ]
+  }
+}

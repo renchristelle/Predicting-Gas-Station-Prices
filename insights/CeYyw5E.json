@@ -1,0 +1,29 @@
+{
+  "type": "jupyter",
+  "params": {
+    "notebookSmartName": "Visualization with Altair \u0026 Folium",
+    "exportTimestamp": 0,
+    "loadLast": true
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Visualization with Altair \u0026 Folium",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577378121178
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577378121178
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

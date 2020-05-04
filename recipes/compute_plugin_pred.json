@@ -1,0 +1,73 @@
+{
+  "type": "CustomCode_time-series-forecast-3-predict",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {
+      "MODEL_SELECTION": "manual",
+      "ERROR_METRIC": "mean_absolute_error",
+      "SELECTED_MODEL": "ARIMA_MODEL",
+      "INCLUDE_HISTORY": false,
+      "INCLUDE_FORECAST": true,
+      "FORECAST_HORIZON": 25,
+      "CONFIDENCE_INTERVAL": 95
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "EVALUATION_DATASET_NAME": {
+      "items": [
+        {
+          "ref": "to_predict_mod",
+          "deps": []
+        }
+      ]
+    },
+    "MODEL_FOLDER_NAME": {
+      "items": [
+        {
+          "ref": "bGMe1V5w",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "OUTPUT_DATASET_NAME": {
+      "items": [
+        {
+          "ref": "plugin_pred",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 7,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1585074900445
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1581935260557
+  },
+  "tags": [
+    "Pred - Forecast Plugin"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

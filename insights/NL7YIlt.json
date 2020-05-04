@@ -1,0 +1,30 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "time_series_per_state",
+    "objectType": "DATASET",
+    "metricId": "col_stats:MEAN:nb_gas_stations_analysed"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Avg Number of Gas Stations Analysed",
+  "dashboardCreationId": "SNaFZif",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577463130390
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577463130390
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

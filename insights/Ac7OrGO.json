@@ -1,0 +1,30 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "time_series_per_state",
+    "objectType": "DATASET",
+    "metricId": "adv_col_stats:MODE:static_state_full"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "State",
+  "dashboardCreationId": "SNaFZif",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577463045598
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1577463045598
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

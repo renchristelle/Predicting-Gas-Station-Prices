@@ -1,0 +1,95 @@
+{
+  "type": "CustomCode_time-series-forecast-2-train-evaluate",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {
+      "GRANULARITY": "week",
+      "AUTOML": "auto",
+      "NAIVE_MODEL_ACTIVATED": true,
+      "NAIVE_MODEL_METHOD": "simple",
+      "NAIVE_MODEL_KWARGS": {},
+      "NEURALNETWORK_MODEL_ACTIVATED": false,
+      "NEURALNETWORK_MODEL_NUMBER_SEASONAL_LAGS": 1,
+      "NEURALNETWORK_MODEL_NUMBER_NON_SEASONAL_LAGS": -1,
+      "NEURALNETWORK_MODEL_SIZE": -1,
+      "NEURALNETWORK_MODEL_KWARGS": {},
+      "ARIMA_MODEL_ACTIVATED": true,
+      "ARIMA_MODEL_STEPWISE": true,
+      "ARIMA_MODEL_KWARGS": {},
+      "SEASONALTREND_MODEL_ACTIVATED": false,
+      "SEASONALTREND_MODEL_KWARGS": {},
+      "EXPONENTIALSMOOTHING_MODEL_ACTIVATED": false,
+      "EXPONENTIALSMOOTHING_MODEL_ERROR_TYPE": "Z",
+      "EXPONENTIALSMOOTHING_MODEL_TREND_TYPE": "Z",
+      "EXPONENTIALSMOOTHING_MODEL_SEASONALITY_TYPE": "Z",
+      "EXPONENTIALSMOOTHING_MODEL_KWARGS": {},
+      "STATESPACE_MODEL_ACTIVATED": false,
+      "STATESPACE_MODEL_KWARGS": {},
+      "EVAL_STRATEGY": "split",
+      "EVAL_HORIZON": 25,
+      "CROSSVAL_INITIAL": -1,
+      "CROSSVAL_PERIOD": -1,
+      "EXT_SERIES_COLUMNS": [],
+      "TIME_COLUMN": "date_start",
+      "SERIES_COLUMN": "mean_distribution_price"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "INPUT_DATASET_NAME": {
+      "items": [
+        {
+          "ref": "historical_mod",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "EVALUATION_DATASET_NAME": {
+      "items": [
+        {
+          "ref": "plugin_results",
+          "appendMode": false
+        }
+      ]
+    },
+    "MODEL_FOLDER_NAME": {
+      "items": [
+        {
+          "ref": "bGMe1V5w",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 7,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1585074838311
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1581935168647
+  },
+  "tags": [
+    "Pred - Forecast Plugin"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

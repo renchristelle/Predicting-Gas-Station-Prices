@@ -1,0 +1,98 @@
+{
+  "type": "CustomCode_time-series-forecast-2-train-evaluate",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {
+      "PROPHET_MODEL_MAXIMUM": 1.0,
+      "NEURALNETWORK_MODEL_NUMBER_NON_SEASONAL_LAGS": -1.0,
+      "SEASONALTREND_MODEL_ACTIVATED": false,
+      "EXPONENTIALSMOOTHING_MODEL_SEASONALITY_TYPE": "Z",
+      "CROSSVAL_INITIAL": -1.0,
+      "PROPHET_MODEL_GROWTH": "linear",
+      "STATESPACE_MODEL_ACTIVATED": false,
+      "EXPONENTIALSMOOTHING_MODEL_ACTIVATED": false,
+      "NEURALNETWORK_MODEL_SIZE": -1.0,
+      "TIME_COLUMN": "date_start",
+      "AUTOML": "auto",
+      "EXPONENTIALSMOOTHING_MODEL_ERROR_TYPE": "Z",
+      "EVAL_STRATEGY": "split",
+      "ARIMA_MODEL_KWARGS": {},
+      "EXPONENTIALSMOOTHING_MODEL_TREND_TYPE": "Z",
+      "SEASONALTREND_MODEL_KWARGS": {},
+      "NAIVE_MODEL_METHOD": "simple",
+      "NEURALNETWORK_MODEL_KWARGS": {},
+      "PROPHET_MODEL_KWARGS": {},
+      "SERIES_COLUMN": "mean_distribution_price",
+      "STATESPACE_MODEL_KWARGS": {},
+      "NAIVE_MODEL_ACTIVATED": true,
+      "NEURALNETWORK_MODEL_NUMBER_SEASONAL_LAGS": 1.0,
+      "ARIMA_MODEL_STEPWISE": true,
+      "GRANULARITY": "week",
+      "NEURALNETWORK_MODEL_ACTIVATED": true,
+      "EVAL_HORIZON": 10.0,
+      "CROSSVAL_PERIOD": -1.0,
+      "PROPHET_MODEL_ACTIVATED": true,
+      "NAIVE_MODEL_KWARGS": {},
+      "EXPONENTIALSMOOTHING_MODEL_KWARGS": {},
+      "PROPHET_MODEL_MINIMUM": 0.0,
+      "ARIMA_MODEL_ACTIVATED": false,
+      "EXT_SERIES_COLUMNS": []
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "INPUT_DATASET_NAME": {
+      "items": [
+        {
+          "ref": "temp_",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "EVALUATION_DATASET_NAME": {
+      "items": [
+        {
+          "ref": "eval_ts",
+          "appendMode": false
+        }
+      ]
+    },
+    "MODEL_FOLDER_NAME": {
+      "items": [
+        {
+          "ref": "7rYfoFDK",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 2,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1576750354100
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1576750326741
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
