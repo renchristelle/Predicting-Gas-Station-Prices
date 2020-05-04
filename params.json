@@ -121,21 +121,18 @@
           "objectType": "DATASET"
         },
         "modes": []
+      },
+      {
+        "objectRef": {
+          "objectId": "cities_brazil",
+          "objectType": "DATASET"
+        },
+        "modes": []
       }
     ]
   },
   "exposedObjects": {
     "objects": [
-      {
-        "type": "DATASET",
-        "localName": "cities_brazil",
-        "rules": [
-          {
-            "targetProject": "PREDICTINGGASSTATIONPRICESBRAZIL",
-            "appearOnFlow": true
-          }
-        ]
-      },
       {
         "type": "DATASET",
         "localName": "gas_prices_brazil",
@@ -340,11 +337,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 110,
+    "versionNumber": 111,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588609900848
+    "lastModifiedOn": 1588609918637
   },
   "creationTag": {
     "versionNumber": 0,
