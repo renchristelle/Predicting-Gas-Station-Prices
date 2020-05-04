@@ -1,6 +1,7 @@
 {
   "type": "UploadedFiles",
   "managed": false,
+  "description": "The Federal Reserve\u0027s H.10 statistical release provides data on exchange rates between the US dollar, 23 other currencies, and three benchmark indexes. The data extend back to 1971 for several of these.\n\nPlease note that the csv has six header rows. The first contains the ",
   "shortDesc": "Extract from Kaggle: [Exchange Rates](https://www.kaggle.com/federalreserve/exchange-rates)",
   "formatType": "csv",
   "checklists": {
@@ -59,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588609619080
+    "lastModifiedOn": 1588609628264
   },
   "creationTag": {
     "versionNumber": 0,
