@@ -134,7 +134,10 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "exchange_rate": 113,
+    "day": 183
+  },
   "sorting": [
     {
       "column": "day",

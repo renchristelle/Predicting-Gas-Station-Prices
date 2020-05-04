@@ -14,6 +14,9 @@
             },
             "exchange_rates_brazil": {
               "repartition": 10
+            },
+            "brazil_exchange_rates": {
+              "repartition": 10
             }
           }
         },
@@ -72,11 +75,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 20,
+    "versionNumber": 21,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588609482557
+    "lastModifiedOn": 1588609485519
   },
   "creationTag": {
     "versionNumber": 0,
