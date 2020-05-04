@@ -55,7 +55,7 @@
     "main": {
       "items": [
         {
-          "ref": "exchange_rates_brazil",
+          "ref": "brazil_exchange_rates",
           "deps": []
         }
       ]
@@ -72,11 +72,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 19,
+    "versionNumber": 20,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1582015290786
+    "lastModifiedOn": 1588609482557
   },
   "creationTag": {
     "versionNumber": 0,

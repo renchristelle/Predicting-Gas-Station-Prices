@@ -134,6 +134,7 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
+  "columnWidthsByName": {},
   "sorting": [
     {
       "column": "day",
