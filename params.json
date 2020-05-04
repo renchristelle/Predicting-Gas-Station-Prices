@@ -128,21 +128,18 @@
           "objectType": "DATASET"
         },
         "modes": []
+      },
+      {
+        "objectRef": {
+          "objectId": "gas_prices_brazil",
+          "objectType": "DATASET"
+        },
+        "modes": []
       }
     ]
   },
   "exposedObjects": {
     "objects": [
-      {
-        "type": "DATASET",
-        "localName": "gas_prices_brazil",
-        "rules": [
-          {
-            "targetProject": "PREDICTINGGASSTATIONPRICESBRAZIL",
-            "appearOnFlow": true
-          }
-        ]
-      },
       {
         "type": "DATASET",
         "localName": "exchange_rates_brazil",
@@ -337,11 +334,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 111,
+    "versionNumber": 112,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588609918637
+    "lastModifiedOn": 1588609922465
   },
   "creationTag": {
     "versionNumber": 0,
