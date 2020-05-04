@@ -1,6 +1,7 @@
 {
   "type": "UploadedFiles",
   "managed": false,
+  "shortDesc": "Extract from Kaggle: [Exchange Rates](https://www.kaggle.com/federalreserve/exchange-rates)",
   "formatType": "csv",
   "checklists": {
     "checklists": []
@@ -58,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588609393711
+    "lastModifiedOn": 1588609619080
   },
   "creationTag": {
     "versionNumber": 0,
