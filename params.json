@@ -286,7 +286,7 @@
       }
     }
   },
-  "name": "DEMO Predicting Gas Station Prices",
+  "name": "Predicting Gas Station Prices",
   "imgPattern": 3,
   "metrics": {
     "probes": [],
@@ -343,11 +343,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 107,
+    "versionNumber": 109,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588609348810
+    "lastModifiedOn": 1588609832244
   },
   "creationTag": {
     "versionNumber": 0,
@@ -357,7 +357,7 @@
     "lastModifiedOn": 1574357562414
   },
   "description": "## Prediction of the Gas Price in stations, Brazil\n\nThe goal is to predict the average price of the gas per state in Brazil per week.\n\nOn Monday, we would like to know what will be the average price from Monday to Friday depending on Monday\u0027s exchange rate, Monday\u0027s oil price, historical data and socio-demo data per state\n\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/PREDICTINGGASSTATIONPRICES/dashboards/SNaFZif_predicting-gas-station-prices/view/9gSncDc\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Access to Dashboard\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e",
-  "shortDesc": "Project created in 2019\nThe project *DEMOPREDICTINGGASSTATIONPRICES* was copied from *PREDICTINGGASSTATIONPRICES* by Administrator on Mar 13th 2020",
+  "shortDesc": "Project created in 2019\nThe project *PREDICTINGGASSTATIONPRICES* was copied from *PREDICTINGGASSTATIONPRICES* by Administrator on Mar 13th 2020",
   "tags": [
     "imported",
     "duplicated"
