@@ -1,5 +1,5 @@
 {
-  "type": "PostgreSQL",
+  "type": "Filesystem",
   "managed": true,
   "formatType": "csv",
   "checklists": {
@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1582015290824
+    "lastModifiedOn": 1588609528089
   },
   "creationTag": {
     "versionNumber": 0,
@@ -76,19 +76,15 @@
     "Data Prep \u0026 Feature Eng."
   ],
   "params": {
-    "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
-    "connection": "postgres_dev",
+    "connection": "filesystem_managed",
+    "path": "${projectKey}/brent_oil_prices_prepared",
     "notReadyIfEmpty": false,
-    "mode": "table",
-    "partitioningType": "custom",
-    "normalizeDoubles": true,
-    "table": "${projectKey}_brent_oil_prices_prepared",
-    "schema": "dataiku_all",
-    "tableCreationMode": "auto",
-    "writeInsertBatchSize": 10000,
-    "writeJDBCBadDataBehavior": "DISCARD_ROW",
-    "readColsWithUnknownTzAsDates": false,
-    "readSQLDateColsAsDSSDates": true
+    "filesSelectionRules": {
+      "mode": "ALL",
+      "excludeRules": [],
+      "includeRules": [],
+      "explicitFiles": []
+    }
   },
   "schema": {
     "columns": [

@@ -1,6 +1,7 @@
 {
-  "type": "PostgreSQL",
+  "type": "Filesystem",
   "managed": true,
+  "formatType": "csv",
   "checklists": {
     "checklists": []
   },
@@ -22,17 +23,47 @@
       "rules": []
     }
   },
+  "formatParams": {
+    "style": "unix",
+    "charset": "utf8",
+    "separator": "\t",
+    "quoteChar": "\"",
+    "escapeChar": "\\",
+    "dateSerializationFormat": "ISO",
+    "arrayMapFormat": "json",
+    "hiveSeparators": [
+      "\u0002",
+      "\u0003",
+      "\u0004",
+      "\u0005",
+      "\u0006",
+      "\u0007",
+      "\b"
+    ],
+    "skipRowsBeforeHeader": 0,
+    "parseHeaderRow": false,
+    "skipRowsAfterHeader": 0,
+    "probableNumberOfRecords": 0,
+    "normalizeBooleans": false,
+    "normalizeDoubles": true,
+    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+    "readMissingColumnsBehavior": "DISCARD_SILENT",
+    "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "fileReadFailureBehavior": "FAIL",
+    "compress": "gz"
+  },
   "partitioning": {
     "ignoreNonMatchingFile": false,
     "considerMissingRequestedPartitionsAsEmpty": false,
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585073276353
+    "lastModifiedOn": 1588609528076
   },
   "creationTag": {
     "versionNumber": 0,
@@ -45,19 +76,15 @@
     "Visualization"
   ],
   "params": {
-    "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
-    "connection": "postgres_dev",
+    "connection": "filesystem_managed",
+    "path": "${projectKey}/avg_mdp",
     "notReadyIfEmpty": false,
-    "mode": "table",
-    "partitioningType": "custom",
-    "normalizeDoubles": true,
-    "table": "${projectKey}_avg_mdp",
-    "schema": "dku_v6",
-    "tableCreationMode": "auto",
-    "writeInsertBatchSize": 10000,
-    "writeJDBCBadDataBehavior": "DISCARD_ROW",
-    "readColsWithUnknownTzAsDates": false,
-    "readSQLDateColsAsDSSDates": true
+    "filesSelectionRules": {
+      "mode": "ALL",
+      "excludeRules": [],
+      "includeRules": [],
+      "explicitFiles": []
+    }
   },
   "schema": {
     "columns": [

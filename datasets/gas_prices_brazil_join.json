@@ -1,5 +1,5 @@
 {
-  "type": "PostgreSQL",
+  "type": "Filesystem",
   "managed": true,
   "formatType": "csv",
   "checklists": {
@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 13,
+    "versionNumber": 14,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1582015290949
+    "lastModifiedOn": 1588609528084
   },
   "creationTag": {
     "versionNumber": 0,
@@ -76,19 +76,15 @@
     "Data Prep \u0026 Feature Eng."
   ],
   "params": {
-    "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
-    "connection": "postgres_dev",
+    "connection": "filesystem_managed",
+    "path": "${projectKey}/gas_prices_brazil_join",
     "notReadyIfEmpty": false,
-    "mode": "table",
-    "partitioningType": "custom",
-    "normalizeDoubles": true,
-    "table": "${projectKey}_gas_prices_brazil_join",
-    "schema": "dataiku_all",
-    "tableCreationMode": "auto",
-    "writeInsertBatchSize": 10000,
-    "writeJDBCBadDataBehavior": "DISCARD_ROW",
-    "readColsWithUnknownTzAsDates": false,
-    "readSQLDateColsAsDSSDates": true
+    "filesSelectionRules": {
+      "mode": "ALL",
+      "excludeRules": [],
+      "includeRules": [],
+      "explicitFiles": []
+    }
   },
   "schema": {
     "columns": [
