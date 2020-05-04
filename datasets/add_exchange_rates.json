@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1582045419687
+    "lastModifiedOn": 1588609594569
   },
   "creationTag": {
     "versionNumber": 0,
@@ -52,7 +52,7 @@
     "partitioningType": "custom",
     "normalizeDoubles": true,
     "table": "${projectKey}_add_exchange_rates",
-    "schema": "dataiku_all",
+    "schema": "",
     "tableCreationMode": "auto",
     "writeInsertBatchSize": 10000,
     "writeJDBCBadDataBehavior": "DISCARD_ROW",
@@ -70,7 +70,7 @@
         "type": "double"
       }
     ],
-    "userModified": false
+    "userModified": true
   },
   "metrics": {
     "probes": [
@@ -128,6 +128,10 @@
       },
       "impala": {
         "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
       },
       "python": {}
     },
