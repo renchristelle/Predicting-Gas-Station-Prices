@@ -1597,65 +1597,7 @@
       "checkpoint_interval": 10
     },
     "custom_python": [],
-    "plugin_python": {
-      "CustomPyPredAlgo_model-lightgbm_model-lightgbm_regression": {
-        "pluginId": "model-lightgbm",
-        "pluginVersion": "1.0.0",
-        "elementId": "model-lightgbm_regression",
-        "name": "LightGBM Regression",
-        "enabled": false,
-        "params": {
-          "boosting_type": [
-            "gbdt"
-          ],
-          "num_leaves": [
-            50,
-            100
-          ],
-          "max_depth": [
-            50,
-            100
-          ],
-          "learning_rate": [
-            0.2
-          ],
-          "n_estimators": [
-            50,
-            100
-          ],
-          "early_stopping": false,
-          "early_stopping_rounds": 4,
-          "min_split_gain": [
-            0
-          ],
-          "min_child_weight": [
-            0.001
-          ],
-          "min_child_samples": [
-            20
-          ],
-          "subsample": [
-            1
-          ],
-          "subsample_freq": [
-            0
-          ],
-          "colsample_bytree": [
-            1
-          ],
-          "reg_alpha": [
-            0
-          ],
-          "reg_lambda": [
-            0
-          ],
-          "random_state": 1337,
-          "n_jobs": 4
-        },
-        "supportsSampleWeights": false,
-        "acceptsSparseMatrix": false
-      }
-    },
+    "plugin_python": {},
     "keras": {
       "epochs": 10,
       "batchSize": 32,
