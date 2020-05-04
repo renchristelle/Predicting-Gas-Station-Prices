@@ -139,18 +139,7 @@
     ]
   },
   "exposedObjects": {
-    "objects": [
-      {
-        "type": "DATASET",
-        "localName": "exchange_rates_brazil",
-        "rules": [
-          {
-            "targetProject": "PREDICTINGGASSTATIONPRICESBRAZIL",
-            "appearOnFlow": true
-          }
-        ]
-      }
-    ]
+    "objects": []
   },
   "projectType": "REGULAR",
   "bundleExporterSettings": {
@@ -334,11 +323,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 112,
+    "versionNumber": 113,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588609922465
+    "lastModifiedOn": 1588610914034
   },
   "creationTag": {
     "versionNumber": 0,
