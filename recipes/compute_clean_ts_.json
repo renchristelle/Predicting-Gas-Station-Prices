@@ -12,7 +12,8 @@
       "clip_end": 1,
       "shift": 0,
       "advanced_activated": false,
-      "datetime_column": "date_start"
+      "datetime_column": "date_start",
+      "constant_value": 0
     },
     "containerSelection": {
       "containerMode": "INHERIT"
@@ -44,11 +45,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1582293998022
+    "lastModifiedOn": 1588623928115
   },
   "creationTag": {
     "versionNumber": 0,
