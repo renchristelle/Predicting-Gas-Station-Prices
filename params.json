@@ -114,21 +114,18 @@
           "objectType": "DATASET"
         },
         "modes": []
+      },
+      {
+        "objectRef": {
+          "objectId": "BrentOilPrices",
+          "objectType": "DATASET"
+        },
+        "modes": []
       }
     ]
   },
   "exposedObjects": {
     "objects": [
-      {
-        "type": "DATASET",
-        "localName": "BrentOilPrices",
-        "rules": [
-          {
-            "targetProject": "PREDICTINGGASSTATIONPRICESBRAZIL",
-            "appearOnFlow": true
-          }
-        ]
-      },
       {
         "type": "DATASET",
         "localName": "cities_brazil",
@@ -343,11 +340,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 109,
+    "versionNumber": 110,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588609832244
+    "lastModifiedOn": 1588609900848
   },
   "creationTag": {
     "versionNumber": 0,
