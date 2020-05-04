@@ -5,6 +5,36 @@
     "columnsSelection": {
       "mode": "ALL"
     },
+    "columnWidthsByName": {
+      "date_start": 183,
+      "date_end": 183,
+      "region": 100,
+      "gas_state": 100,
+      "kind_of_product": 162,
+      "nb_gas_stations_analysed": 195,
+      "mean_distribution_price": 188,
+      "mdp_25w_mean_distribution_price_avg": 278,
+      "mdp_avg_1m_25w_mean_distribution_price_avg": 300,
+      "mdp_avg_3m_25w_mean_distribution_price_avg": 300,
+      "oil_Date": 183,
+      "oil_Date_week": 113,
+      "oil_Price": 100,
+      "oil_op_25w_Price_avg": 165,
+      "oil_op_avg_1m_25w_Price_avg": 239,
+      "oil_op_avg_3m_25w_Price_avg": 239,
+      "static_state_full": 143,
+      "static_city_count": 143,
+      "static_human_dvpt_index_avg": 239,
+      "static_life_exp_index_avg": 225,
+      "static_estimated_pop_sum": 195,
+      "static_gdp_per_capita_avg": 225,
+      "static_nb_companies_sum": 188,
+      "static_assets_private_banks_sum": 248,
+      "static_assets_public_banks_sum": 240,
+      "static_nb_cars_sum": 150,
+      "exchange_day": 106,
+      "exchange_rate": 113
+    },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
@@ -13,7 +43,7 @@
     "sorting": [
       {
         "column": "date_start",
-        "ascending": false
+        "ascending": true
       }
     ],
     "analysisColumnData": {},
