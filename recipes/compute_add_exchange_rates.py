@@ -36,7 +36,7 @@ df = pd.DataFrame({'day':dates,'exchange_rate':rates}).sort_values('day',ascendi
 
 df['day'] = pd.to_datetime(df['day'])
 
-"""
+
 # Write recipe outputs
 add_exchange_rates = dataiku.Dataset("add_exchange_rates")
-add_exchange_rates.write_with_schema(df)"""
+add_exchange_rates.write_with_schema(df)
