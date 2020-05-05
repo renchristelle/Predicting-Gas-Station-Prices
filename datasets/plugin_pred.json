@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588611470046
+    "lastModifiedOn": 1588678359239
   },
   "creationTag": {
     "versionNumber": 0,
@@ -96,6 +96,10 @@
         "type": "string"
       },
       {
+        "name": "mean_distribution_price",
+        "type": "double"
+      },
+      {
         "name": "forecast",
         "type": "double"
       },
@@ -105,6 +109,10 @@
       },
       {
         "name": "forecast_upper_confidence_interval",
+        "type": "double"
+      },
+      {
+        "name": "forecast_residuals",
         "type": "double"
       },
       {
