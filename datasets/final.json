@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 18,
+    "versionNumber": 19,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588609583789
+    "lastModifiedOn": 1588698468685
   },
   "creationTag": {
     "versionNumber": 0,
@@ -110,6 +110,10 @@
       {
         "name": "forecast_MDP_plugin",
         "type": "double"
+      },
+      {
+        "name": "week_2",
+        "type": "date"
       },
       {
         "name": "forecast_MDP_vml",
