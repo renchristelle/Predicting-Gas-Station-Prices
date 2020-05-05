@@ -7,7 +7,7 @@
       "MODEL_SELECTION": "manual",
       "ERROR_METRIC": "mean_absolute_error",
       "SELECTED_MODEL": "ARIMA_MODEL",
-      "INCLUDE_HISTORY": false,
+      "INCLUDE_HISTORY": true,
       "INCLUDE_FORECAST": true,
       "FORECAST_HORIZON": 25,
       "CONFIDENCE_INTERVAL": 95
@@ -50,11 +50,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585074900445
+    "lastModifiedOn": 1588678332090
   },
   "creationTag": {
     "versionNumber": 0,
