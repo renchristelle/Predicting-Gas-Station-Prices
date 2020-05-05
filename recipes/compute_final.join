@@ -82,6 +82,12 @@
       "table": 1
     },
     {
+      "name": "week",
+      "alias": "week_2",
+      "type": "date",
+      "table": 1
+    },
+    {
       "name": "prediction",
       "alias": "forecast_MDP_vml",
       "type": "float",
@@ -177,6 +183,10 @@
           {
             "name": "forecast_MDP_plugin",
             "type": "double"
+          },
+          {
+            "name": "week_2",
+            "type": "date"
           },
           {
             "name": "forecast_MDP_vml",
