@@ -1,0 +1,33 @@
+{
+  "filters": [
+    {
+      "isAdvanced": false,
+      "scope": "PRIVATE",
+      "isDirty": true,
+      "creatorLogin": "admin",
+      "id": "4196fc09b59505d54d4340ff568074f16d0ce4a84b2817b43377325c55b7da2d69da4f7ea630e7be9a8e2331159aa2c475dae1d84e6516020ff5de121c780ddc",
+      "creationDate": 1591786581690,
+      "derivedFromFilterId": "-1",
+      "structuredFlowObjectFilter": {
+        "tags": [
+          "Data Prep \u0026 Feature Eng."
+        ],
+        "types": [],
+        "creator": [],
+        "customCreationDateRange": {
+          "from": 0,
+          "to": 0
+        },
+        "customModificationDateRange": {
+          "from": 0,
+          "to": 0
+        },
+        "downstreamPredecessorsIds": [],
+        "datasetTypes": [],
+        "recipeTypes": []
+      },
+      "removeFadedElements": false,
+      "query": "tag:\"Data Prep \u0026 Feature Eng.\""
+    }
+  ]
+}
