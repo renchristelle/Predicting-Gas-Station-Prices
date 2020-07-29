@@ -5,6 +5,29 @@
     "columnsSelection": {
       "mode": "ALL"
     },
+    "columnWidthsByName": {
+      "col_0": 100,
+      "DATA INICIAL": 134,
+      "DATA FINAL": 120,
+      "REGIÃO": 100,
+      "ESTADO": 148,
+      "PRODUTO": 127,
+      "NÚMERO DE POSTOS PESQUISADOS": 225,
+      "UNIDADE DE MEDIDA": 143,
+      "PREÇO MÉDIO REVENDA": 158,
+      "DESVIO PADRÃO REVENDA": 173,
+      "PREÇO MÍNIMO REVENDA": 165,
+      "PREÇO MÁXIMO REVENDA": 165,
+      "MARGEM MÉDIA REVENDA": 165,
+      "COEF DE VARIAÇÃO REVENDA": 195,
+      "PREÇO MÉDIO DISTRIBUIÇÃO": 195,
+      "DESVIO PADRÃO DISTRIBUIÇÃO": 210,
+      "PREÇO MÍNIMO DISTRIBUIÇÃO": 203,
+      "PREÇO MÁXIMO DISTRIBUIÇÃO": 203,
+      "COEF DE VARIAÇÃO DISTRIBUIÇÃO": 233,
+      "MÊS": 100,
+      "ANO": 100
+    },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
@@ -25,14 +48,14 @@
           "enabled": false,
           "rules": []
         },
-        "samplingMethod": "RANDOM_FIXED_RATIO",
+        "samplingMethod": "HEAD_SEQUENTIAL",
         "maxRecords": 10000,
         "targetRatio": 1.0,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 1
+      "_refreshTrigger": 2
     },
     "vizSampling": {
       "autoRefreshSample": false,
