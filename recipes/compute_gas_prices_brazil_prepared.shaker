@@ -299,6 +299,15 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
+  "columnWidthsByName": {
+    "date_start": 183,
+    "kind_of_product": 162,
+    "nb_gas_stations_analysed": 195,
+    "date_end": 183,
+    "mean_distribution_price": 188,
+    "state": 148,
+    "region": 100
+  },
   "sorting": [
     {
       "column": "date_start",
