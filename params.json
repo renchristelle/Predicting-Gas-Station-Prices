@@ -270,6 +270,7 @@
   },
   "name": "Predicting Gas Station Prices",
   "imgPattern": 3,
+  "showInitials": false,
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -325,11 +326,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 115,
+    "versionNumber": 116,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588617487272
+    "lastModifiedOn": 1596042003577
   },
   "creationTag": {
     "versionNumber": 0,
