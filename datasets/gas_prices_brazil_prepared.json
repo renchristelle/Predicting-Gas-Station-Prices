@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 14,
+    "versionNumber": 15,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588609583773
+    "lastModifiedOn": 1596056467120
   },
   "creationTag": {
     "versionNumber": 0,
@@ -114,7 +114,7 @@
       },
       {
         "name": "nb_gas_stations_analysed",
-        "type": "bigint"
+        "type": "double"
       },
       {
         "name": "mean_distribution_price",
