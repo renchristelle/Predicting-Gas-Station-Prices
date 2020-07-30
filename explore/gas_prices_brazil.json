@@ -73,13 +73,13 @@
       "copySelectionFromScript": true,
       "engineType": "LINO",
       "def": {
-        "type": "grouped_columns",
+        "type": "lines",
         "variant": "normal",
-        "name": "Avg. of PREÇO MÁXIMO DISTRIBUIÇÃO by ESTADO",
+        "name": "Avg. of PREÇO MÁXIMO DISTRIBUIÇÃO by DATA INICIAL",
         "userEditedName": false,
         "genericDimension0": [
           {
-            "column": "ESTADO",
+            "column": "DATA INICIAL",
             "type": "ALPHANUM",
             "numParams": {
               "emptyBinsMode": "ZEROS"
@@ -207,7 +207,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAABKUlEQVRoQ+1ZQRKCMAxMvuHFf3jSixf5jQffgO/h5EVP/gO/4SFO0TKhFKzD2A5lOUEHJmyySTYt08IudvGuT9XVrtVlscvNH6OAcwQeDNhGfu5R/xlwS3GhiohX5rk+H45zof40wEzFEFDDBF0PzHsicmHmfXNP9LTfPsqiWYtxJQPsA+d3Et+YZRvi2JB0ywqwcsqdiDZNujmdBoDdvLNe6q2bojUhh/9BaV+EtR0T7ewjDMBj0lIrLVAaOdzlyjfhgaL16Zl9dRYuPFClHRqhLRmHQHgM5BahSqNKj87DaEtoS28OiKAPd7LBp+iIqN0AwLSEaUmdPGA81HSA8IDwgPDQJw9QWqmUVozznZQ2evvSKX8mhm0AjuHllDYQ4ZTej2F7cRF+AS7dclZm/8bhAAAAAElFTkSuQmCC",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAAA3UlEQVRoQ+2TMQrCQBRE3YssOdCKVcAup9DVE0jiKewCaQT3MlbK3kMRCyFYTfJBmWRSzw9v5iVuMbPHWfsWMa3vdWit7/nVvbnwGNBil6J7Ps63ZnUdc2+5+UthC/CQW79NVW7CqX8z6cLvoj5eDrle7j+lJ1/4+4tQ4SH/CGNWhhmtIcx+k8p8DJ0MI2sxZ2SY2R7CLsPISswZGWa2h7DLMLISc0aGme0h7DKMrMSckWFmewi7DCMrMWdkmNkewi7DyErMGRlmtoewyzCyEnNGhpntIewyjKzEnHkBAb8XKQ1Qw8AAAAAASUVORK5CYII\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT"
