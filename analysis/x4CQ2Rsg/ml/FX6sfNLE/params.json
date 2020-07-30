@@ -174,7 +174,7 @@
         "generate_derivative": false,
         "numerical_handling": "REGULAR",
         "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
+        "missing_impute_with": "MEDIAN",
         "impute_constant_value": 0.0,
         "rescaling": "AVGSTD",
         "quantile_bin_nb_bins": 4,
@@ -183,7 +183,7 @@
         "role": "INPUT",
         "type": "NUMERIC",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "LongMeaning"
         },
@@ -661,7 +661,8 @@
       "enabled": true,
       "n_estimators": {
         "values": [
-          100
+          100,
+          200
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
