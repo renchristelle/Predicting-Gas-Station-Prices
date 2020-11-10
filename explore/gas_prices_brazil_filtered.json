@@ -53,7 +53,7 @@
   },
   "charts": [
     {
-      "copySelectionFromScript": false,
+      "copySelectionFromScript": true,
       "engineType": "LINO",
       "refreshableSelection": {
         "selection": {
@@ -75,7 +75,7 @@
           "maxReadUncompressedBytes": -1
         },
         "autoRefreshSample": false,
-        "_refreshTrigger": 1
+        "_refreshTrigger": 2
       },
       "def": {
         "type": "scatter",
@@ -181,7 +181,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAAAjUlEQVRoQ+2UQQ3AIBTFQMJEoAc50zA56EHELOzEafeSPIqB5rU/1HLYq4ftLQ5OL25hC4cZ8KTDgv7mWNjCYQY86bCgflqetCcdZmD7Sbd7vPPpF+V1+2Bq6OI4mDZO8yxMG6d5FqaN0zwL08ZpnoVp4zTPwrRxmmdh2jjNszBtnOZZmDZO8yxMG6d5H/VpBCl+3bQ4AAAAAElFTkSuQmCC",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAAAj0lEQVRoQ+2UsQ2AMAwEk1FA7AOzUJAZoGAW2AfBKgxAqq/w59JHsu9OzqmxlxvbN7Gwu3EMY9iMAEmbCf2sg2EMmxEgaTOhHC2SJmkzAiRtJpQrTdIkbUaApM2EcqVJmqTNCJB0TehQzvlax/0PsvvleO5t6tRZMKySi/IPw1FMqXNiWCUX5R+Go5hS53wBgR0IKTvN93kAAAAASUVORK5CYII\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT"
