@@ -110,14 +110,7 @@
           }
         ],
         "uaSize": [],
-        "uaShape": [
-          {
-            "column": "static_gdp_per_capita_avg",
-            "type": "ALPHANUM",
-            "treatAsAlphanum": false,
-            "adminLevel": 0
-          }
-        ],
+        "uaShape": [],
         "uaColor": [],
         "uaTooltip": [],
         "groupDimension": [],
@@ -188,7 +181,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAAAlElEQVRoQ+3UQQ2AQBBDUdYIbjCAFXRgBQO4QQknTpx/0nT/Cmhm+iY7lsnemGzfxYXbxRVWuKwBT7oM9LeOwgqXNeBJl4H6aXnSnnRZA5EnvR7X9pz7TXQduTCx6JfpwmS7CdkKJyiQMyhMtpuQrXCCAjmDwmS7CdkKJyiQMyhMtpuQrXCCAjmDwmS7CdkKJyiQM7yiiQQpv5ieAAAAAABJRU5ErkJggg\u003d\u003d",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAAAjUlEQVRoQ+2UQQ3AIBTFQMJEoAc50zA56EHELOzEafeSPIqB5rU/1HLYq4ftLQ5OL25hC4cZ8KTDgv7mWNjCYQY86bCgflqetCcdZmD7Sbd7vPPpF+V1+2Bq6OI4mDZO8yxMG6d5FqaN0zwL08ZpnoVp4zTPwrRxmmdh2jjNszBtnOZZmDZO8yxMG6d5H/VpBCl+3bQ4AAAAAElFTkSuQmCC",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT"
